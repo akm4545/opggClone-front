@@ -18,6 +18,7 @@ const buttonStyle = css`
         background: ${palette.gray[6]};
     }
 
+    //props값을 사용하여 동적으로 css변경
     ${props =>
         props.fullWidth &&
         css`
@@ -39,11 +40,16 @@ const buttonStyle = css`
     }
 `;
 
+//styled를 사용하여 button을 만드는데 css를 전달
 const StyledButton = styled.button`${buttonStyle}`;
+
+//Link컴포넌트를 css스타일을 전달하여 생성
 const StyledLink = styled(Link)`${buttonStyle}`;
 
+//props의 값에 따라 다른 컴포넌트를 생성
 const Button = props => {
     return props.to ? (
+        //props로 들어온 값에 cyan이 존재한다면 cyan을 true로 변경
         <StyledLink {...props} cyan={props.cyan ? 1 : 0} /> 
     ) : (
         <StyledButton {...props} />

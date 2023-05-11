@@ -6,6 +6,7 @@ import Button from "../common/Button";
 
 //components = 상태관리가 이루어지지 않고 props를 받아와 표출만 하는 컴포넌트
 
+//CSS-in-JS 라이브러리를 사용하여 스타일된 컴포넌트 생성
 const AuthFormBlock = styled.div`
     h3{
         margin: 0;
@@ -58,6 +59,7 @@ const textMap = {
     register: '회원가입',
 };
 
+//객체 비구조화할당을 사용하여 해당 값들을 객체로부터 추출
 const AuthForm = ({type, form, onChange, onSubmit, error}) => {
     const text = textMap[type];
 

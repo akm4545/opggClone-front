@@ -15,6 +15,7 @@ const ResponsiveBlock = styled.div`
     }
 `;
 
+//children 값은 받아서 렌더링 하고 나머지는 컴포넌트에 전달
 const Responsive = ({children, ...rest}) => {
     return <ResponsiveBlock {...rest}>{children}</ResponsiveBlock>;
 };

@@ -31,6 +31,7 @@ const WhiteBox = styled.div`
     border-radius: 2px;
 `;
 
+//childern = 중간에 어떤 컴포넌트가 올지 모르기 때문에 동적으로 컴포넌트를 바꾸려고 사용
 const AuthTemplate = ({children}) => {
     return (
         <AuthTemplateBlock>
