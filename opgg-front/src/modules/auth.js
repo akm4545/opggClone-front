@@ -4,6 +4,8 @@ import createRequestSaga, { createRequestActionTypes } from "../lib/createReques
 import {takeLatest} from 'redux-sage/effects';
 import * as authAPI from '../lib/api/auth';
 
+//modules = 리덕스 관련 코드
+
 const CHANGE_FIELD = 'auth/CHANGE_FIELD';
 const INITIALIZE_FORM = 'auth/INITIALIZE_FORM';
 

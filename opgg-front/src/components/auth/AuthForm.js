@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import palette from "../../lib/styles/palette";
 import Button from "../common/Button";
 
+//components = 상태관리가 이루어지지 않고 props를 받아와 표출만 하는 컴포넌트
+
 const AuthFormBlock = styled.div`
     h3{
         margin: 0;

@@ -5,6 +5,8 @@ import AuthForm from "../../components/auth/AuthForm";
 import {withRouter} from 'react-router-dom';
 import {check} from '../../modules/user';
 
+//containers = 리덕스와 연동되어 상태를 받거나 액션을 디스패치 하는 컴포넌트
+
 const LoginForm = ({history}) => {
     const [error, setError] = useState(null);
     const dispatch = useDispatch();
