@@ -2,12 +2,14 @@ import React, {useEffect, useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { changeField, initializeForm, login } from "../../modules/auth";
 import AuthForm from "../../components/auth/AuthForm";
-import {withRouter} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import {check} from '../../modules/user';
 
 //containers = 리덕스와 연동되어 상태를 받거나 액션을 디스패치 하는 컴포넌트
 
-const LoginForm = ({history}) => {
+const LoginForm = () => {
+    const navigate = useNavigate();
+
     //useState = state값 관리 useState(기본값)으로 사용
     //setError = state값을 변경하는 함수
     const [error, setError] = useState(null);
@@ -69,7 +71,7 @@ const LoginForm = ({history}) => {
 
     useEffect(() => {
         if(user){
-            history.push('/');
+            navigate('/');
 
             try{
                 localStorage.setItem('user', JSON.stringify(user));
@@ -77,7 +79,7 @@ const LoginForm = ({history}) => {
                 console.log('localStoraage is not working');
             }
         }
-    }, [history, user]);
+    }, [navigate, user]);
 
     return (
         <AuthForm
@@ -91,4 +93,4 @@ const LoginForm = ({history}) => {
 };
 
 //history 객체를 사용하기 위해 필요
-export default withRouter(LoginForm);
+export default LoginForm;

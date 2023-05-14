@@ -3,9 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeField, initializeForm, register } from "../../modules/auth";
 import AuthForm from "../../components/auth/AuthForm";
 import { check } from "../../modules/user";
-import {withRouter} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
-const RegisterForm = ({history}) => {
+const RegisterForm = () => {
+    const navigate = useNavigate();
+
     const [error, setError] = useState(null);
     const dispatch = useDispatch();
     const {form, auth, authError, user} = useSelector(({auth, user}) => ({
@@ -70,7 +72,7 @@ const RegisterForm = ({history}) => {
 
     useEffect(() => {
         if(user){
-            history.push('/');
+            navigate('/');
 
             try{
                 localStorage.setItem('user', JSON.stringify('user', JSON.stringify(user)));
@@ -78,7 +80,7 @@ const RegisterForm = ({history}) => {
                 console.log('localStrage is not working');
             }
         }
-    }, [history ,user]);
+    }, [navigate, user]);
 
     return(
         <AuthForm
@@ -91,4 +93,4 @@ const RegisterForm = ({history}) => {
     );
 };
 
-export default withRouter(RegisterForm);
+export default RegisterForm;
