@@ -4,6 +4,7 @@ import auth, {authSaga} from './auth';
 import loading from "./loading";
 import user, {userSaga} from './user';
 
+//루트 사가에 등록
 const rootReducer = combineReducers({
     auth,
     loading,

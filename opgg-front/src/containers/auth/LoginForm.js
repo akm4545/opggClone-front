@@ -25,7 +25,11 @@ const LoginForm = ({history}) => {
 
     const onChange = e => {
         const {value, name} = e.target;
+        //액션 발생 함수
         dispatch(
+            //액션 생성 함수(사용자 정의)
+            //modules의 auth 참고 -> 생성 액션 타입은 함수 안에 정의되어 있음
+            //payload로 전달할 값만 받음 
             changeField({
                 form: 'login',
                 key: name,
@@ -38,11 +42,15 @@ const LoginForm = ({history}) => {
         e.preventDefault();
 
         const {username, password} = form;
+        //login액셩 발생 시킴
         dispatch(login({username, password}));
     };
 
+    //특정 값이 변경되면 새로 실행될 코드
     useEffect(() => {
+        //실행될 코드를 기입
         dispatch(initializeForm('login'));
+    //배열로 어떤게 변경되는지 감시하고 있을 값 기입 (첫 한번 렌더링 시 실행)    
     }, [dispatch]);
 
     useEffect(() => {
@@ -82,4 +90,5 @@ const LoginForm = ({history}) => {
     );
 };
 
+//history 객체를 사용하기 위해 필요
 export default withRouter(LoginForm);
