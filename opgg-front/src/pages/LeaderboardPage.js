@@ -1,5 +1,5 @@
 import React from "react";
-import OpggHeader from "../components/common/OpggHeader";
+import OpggHeader from "../components/common/Header/OpggHeader";
 import OpggFooter from "../components/common/OpggFooter";
 
 

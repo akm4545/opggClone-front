@@ -1856,3 +1856,42 @@ select {
     color: #758592;
     color: var(--gray500);
 }
+
+.css-1961c94{
+    background-color:#5383E8;
+}
+
+html:lang(ko), html:lang(ko) body, html:lang(ko) button, html:lang(ko) select, html:lang(ko) input, html:lang(ko) textarea, html:lang(ko) label, html:lang(ko) a, html:lang(ko) table{
+    font-family: "Apple SD Gothic Neo","Roboto",sans-serif;
+}
+
+:root {
+    --HSDSGlobalFontFamily: "Aktiv Grotesk","Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    --HSDSGlobalFontFamilySystem: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    --HSDSGlobalFontFamilyMono: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+    --HSDSGlobalFontSize: 13px;
+}
+
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background-color: #ebeef1;
+    background-color: var(--gray200);
+}
+
+.css-c9w21w {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    width: 1080px;
+    gap: 4px;
+}
+
+.desktop-header .css-1dh5idu {
+    width: 124px;
+    height: auto;
+    margin: 2px 0 0;
+}
