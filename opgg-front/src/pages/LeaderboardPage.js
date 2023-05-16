@@ -1,6 +1,6 @@
 import React from "react";
-import OpggHeader from "../components/common/Header/OpggHeader";
-import OpggFooter from "../components/common/OpggFooter";
+import OpggHeader from "../components/common/header/OpggHeader";
+import OpggFooter from "../components/common/footer/OpggFooter";
 
 
 const LeaderboardPage = () => {
