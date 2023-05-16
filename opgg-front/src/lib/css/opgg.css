@@ -2065,3 +2065,124 @@ html {
     top: 0;
     right: 0;
 }
+
+.css-3pvnm9 {
+    min-width: 1080px;
+    margin-top: 48px;
+    padding: 48px 0;
+    background: #ebeef1;
+    background: var(--gray200);
+}
+
+.css-3pvnm9 >div {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.css-3pvnm9 section {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.css-3pvnm9 section:first-of-type .title {
+    margin-left: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.css-3pvnm9 section:first-of-type >* {
+    -webkit-flex-basis: 170px;
+    -ms-flex-preferred-size: 170px;
+    flex-basis: 170px;
+    margin-left: 12px;
+}
+
+.css-3pvnm9 .title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #202D37;
+    color: var(--gray900);
+    padding-bottom: 16px;
+}
+
+.css-3pvnm9 .title {
+    display: block;
+    font-size: 14px;
+    color: #202D37;
+    color: var(--gray900);
+    padding-bottom: 16px;
+}
+
+.css-3pvnm9 a {
+    color: #758592;
+    color: var(--gray500);
+}
+
+.css-3pvnm9 a {
+    font-size: 14px;
+    color: #758592;
+    color: var(--gray500);
+}
+
+.css-3pvnm9 section:first-of-type nav a:first-of-type {
+    margin-top: 0;
+}
+
+.css-3pvnm9 section:first-of-type nav a {
+    display: inline-block;
+    width: 100%;
+    line-height: 20px;
+    margin-top: 4px;
+}
+
+.css-3pvnm9 section:last-of-type {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid;
+    border-color: #DBE0E4;
+    border-color: var(--gray250);
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: flex-end;
+    -webkit-box-align: flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
+}
+
+.css-3pvnm9 section:last-of-type small {
+    color: #9AA4AF;
+    color: var(--gray400);
+}
+
+.css-3pvnm9 small {
+    color: #9AA4AF;
+    color: var(--gray400);
+    font-size: 12px;
+}
+
+.css-3pvnm9 section:last-of-type nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+}
+
+.css-3pvnm9 section:last-of-type nav a:first-of-type {
+    margin-left: 0;
+}
+
+.css-3pvnm9 section:last-of-type nav a {
+    vertical-align: bottom;
+    width: 24px;
+    height: 24px;
+    margin-left: 12px;
+    display: inline-block;
+}
