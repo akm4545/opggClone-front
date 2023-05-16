@@ -1895,3 +1895,173 @@ html {
     height: auto;
     margin: 2px 0 0;
 }
+
+.css-1dh5idu {
+    display: block;
+    width: 94px;
+    height: 46px;
+    margin-right: 21px;
+    margin-top: 2px;
+    margin-left: 9px;
+    overflow: hidden;
+}
+
+.desktop-header .css-ax33we {
+    padding: 0px;
+}
+
+.desktop-header .css-ax33we img {
+    max-width: 100%;
+    max-height: 46px;
+}
+
+.css-ax33we img {
+    display: block;
+    max-width: 290px;
+    margin: 0px auto;
+}
+
+.css-14erh4u {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 9px;
+    margin-bottom: 7px;
+}
+
+.css-14erh4u >div {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+}
+
+.css-1hikutr {
+    background: #FFF;
+    border-radius: 4px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+
+.css-1aduixl {
+    font-size: 12px;
+    line-height: 16px;
+    position: absolute;
+    visibility: hidden;
+}
+
+.css-1aduixl:after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: #9AA4AF;
+    border-top-color: var(--gray400);
+    margin-top: -2.5px;
+}
+
+.css-1hikutr label[for], .css-1hikutr .label {
+    display: none;
+}
+
+.css-1rvu0oj {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.css-1rvu0oj>div>button {
+    height: 32px;
+    background: #ECF2FF;
+    color: #4171D6;
+    border: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.css-1rvu0oj>div>button:after {
+    border-top-color: #5383E8;
+    border-bottom-color: transparent;
+    margin-top: -2.5px;
+}
+
+.css-1rvu0oj>div>button img {
+    display: none;
+}
+
+.css-1rvu0oj>div>button>span {
+    font-size: 12px;
+    text-overflow: inherit;
+    margin-left: 0;
+}
+
+.css-1hikutr button>span {
+    color: #5383E8;
+}
+
+.desktop-header .css-1hikutr input {
+    padding: 8px 12px;
+}
+
+.css-1hikutr input {
+    display: block;
+    width: 840px;
+    -webkit-transition: width 0.2s;
+    transition: width 0.2s;
+    border: 0;
+    box-sizing: border-box;
+    padding: 9px 12px 0 14px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #202D37;
+}
+
+.desktop-header .css-1hikutr>button[type="submit"] {
+    width: 60px;
+    -webkit-background-size: 36px 24px;
+    background-size: 36px 24px;
+}
+
+.css-1hikutr>button[type="submit"] {
+    width: 54px;
+    height: 32px;
+    font-size: 0;
+    position: absolute;
+    right: 0;
+}
+
+.css-1hikutr button[type="submit"] {
+    background-image: url(https://s-lol-web.op.gg/images/icon/icon-gg.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 32px;
+    background-size: 32px;
+    -webkit-background-position: 12px center;
+    background-position: 12px center;
+    width: 32px;
+    font-size: 0;
+}
+
+.css-1hikutr>button {
+    width: 32px;
+    height: 32px;
+    font-size: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
