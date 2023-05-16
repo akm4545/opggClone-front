@@ -2289,3 +2289,93 @@ html {
     margin-left: 12px;
     display: inline-block;
 }
+
+.css-t1a859 {
+    margin-top: 0px;
+    background: var(--gray0);
+}
+
+.css-t1a859 h1, .css-t1a859 .page-title {
+    width: 1080px;
+    margin: 0px auto;
+    font-size: 24px;
+    padding: 16px 0px;
+}
+
+.css-t1a859 h1, .css-t1a859 h2, .css-t1a859 h3 {
+    margin: 0px auto;
+    color: var(--gray900);
+}
+
+.css-t1a859 h1::after, .css-t1a859 .page-title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: var(--gray200);
+    left: 0px;
+    right: 0px;
+    margin-top: 16px;
+}
+
+.css-t1a859 nav {
+    width: 1080px;
+    margin: 0px auto;
+    padding: 4px 0px;
+    white-space: nowrap;
+}
+
+.css-t1a859 h2, .css-t1a859 h3 {
+    font-size: 14px;
+}
+
+.css-1saok50 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.css-t1a859 nav > .e1g0z3cq3.active, .css-t1a859 nav .e1di4bas3.active {
+    font-weight: bold;
+}
+
+.css-t1a859 nav > .e1g0z3cq3, .css-t1a859 nav .e1di4bas3 {
+    border: 0px none;
+    margin-right: 4px;
+}
+
+.css-r0jqv0 {
+    background-color: rgb(81, 81, 99);
+    border-color: transparent;
+    color: rgb(255, 255, 255);
+}
+
+.css-r0jqv0 {
+    font-size: 14px;
+    padding: 0px 16px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.css-kp9opq {
+    font-size: 14px;
+    padding: 0px 16px;
+    height: 40px;
+    line-height: 40px;
+    color: var(--gray900);
+    background-color: var(--gray0);
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border-color: var(--gray250);
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

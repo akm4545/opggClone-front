@@ -2,6 +2,7 @@ import React from "react";
 import HeaderTopMenu from "./HeaderTopMenu";
 import HeaderMiddleSearchBar from "./HeaderMiddleSearchBar";
 import HeaderBottomMenu from "./HeaderBottomMenu";
+import HeaderNotice from "./HeaderNotice";
 
 const OpggHeader = () => {
     return <>
@@ -10,6 +11,7 @@ const OpggHeader = () => {
             <HeaderMiddleSearchBar></HeaderMiddleSearchBar>
             <HeaderBottomMenu></HeaderBottomMenu>
         </header>
+        <HeaderNotice></HeaderNotice>
     </>
 }
 
