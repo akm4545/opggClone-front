@@ -2379,3 +2379,60 @@ html {
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+.css-85l9ui {
+    width: 100%;
+}
+
+.css-85l9ui > :first-of-type {
+    left: 50%;
+    transform: translateX(-864px);
+}
+
+.css-1no9azl {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--gray0);
+    border-radius: 4px;
+    padding: 8px;
+    min-width: 300px;
+    min-height: 600px;
+    position: absolute;
+}
+
+.css-85l9ui > * {
+    margin-top: 8px;
+}
+
+.css-1no9azl::after {
+    content: "OP.GG";
+    position: absolute;
+    text-align: center;
+    font-size: 14px;
+    left: 50%;
+    top: 50%;
+    color: var(--gray0);
+    transform: translate(-50%, -50%);
+    z-index: -100;
+}
+
+.css-1no9azl > * {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.css-1no9azl.fixed {
+    top: 285px;
+}
+
+.css-85l9ui > :last-of-type {
+    right: 50%;
+    transform: translateX(864px);
+}
