@@ -1,9 +1,9 @@
 import React from "react";
 
-const LeaderBoardTable = () => {
+const LeaderBoardTable = ({children}) => {
     return <>
         <div className="css-ndvmk6 elfnyy5m0">
-            <table class="css-147gr6a exo2f213">
+            <table className="css-147gr6a exo2f213">
                 <caption>소환사 랭킹</caption>
                 <colgroup>
                     <col width="40"/>
@@ -14,8 +14,7 @@ const LeaderBoardTable = () => {
                     <col width="50"/>
                     <col width="172"/>
                 </colgroup>
-            </table>
-            <thead>
+                <thead>
                 <tr>
                     <th align="left" scope="col">#</th>
                     <th align="left" scope="col">소환사</th>
@@ -26,6 +25,10 @@ const LeaderBoardTable = () => {
                     <th align="left" scope="col">승률</th>
                 </tr>
             </thead>
+            <tbody>
+                {children}
+            </tbody>
+            </table>
         </div>
     </>
 };

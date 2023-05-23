@@ -2611,3 +2611,273 @@ html {
 .css-147gr6a th:first-of-type, .css-147gr6a td:first-of-type {
     padding-left: 12px;
 }
+
+.css-147gr6a thead th, .css-147gr6a thead td {
+    position: relative;
+    height: 32px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: #F7F7F9;
+    background: var(--gray100);
+    color: #9AA4AF;
+    color: var(--gray400);
+    font-size: 12px;
+    line-height: 16px;
+    border-bottom: 1px solid;
+    border-color: #ebeef1;
+    border-color: var(--gray200);
+    box-sizing: border-box;
+}
+
+.css-147gr6a th, .css-147gr6a td {
+    box-sizing: border-box;
+    font-weight: normal;
+    vertical-align: middle;
+    padding: 4px;
+}
+
+.css-147gr6a tbody th, .css-147gr6a tbody td {
+    text-align: center;
+    border-bottom: 1px solid;
+    border-color: #ebeef1;
+    border-color: var(--gray200);
+}
+
+.css-1kk0pwf >td {
+    padding: 4px 0;
+    font-size: 12px;
+}
+
+.css-oqjmdl {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left!important;
+    font-weight: normal;
+    color: #57646F;
+    color: var(--gray600);
+    background: #FFF;
+    background: var(--gray0);
+    color: #9AA4AF;
+    color: var(--gray400);
+    font-family: "Roboto",sans-serif;
+}
+
+.css-1vdhwjr {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left!important;
+    font-weight: normal;
+    color: #57646F;
+    color: var(--gray600);
+    background: #FFF;
+    background: var(--gray0);
+}
+
+.css-1vdhwjr a {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.css-1vdhwjr >* {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.css-1vdhwjr .icon {
+    -webkit-flex-basis: 32px;
+    -ms-flex-preferred-size: 32px;
+    flex-basis: 32px;
+    border-radius: 50%;
+}
+
+.css-1vdhwjr strong {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding-left: 8px;
+    box-sizing: border-box;
+    color: #202D37;
+    color: var(--gray900);
+}
+
+.css-1vdhwjr strong {
+    font-size: 12px;
+    font-weight: bold;
+    color: #202D37;
+    color: var(--gray900);
+}
+
+.css-1gm6o8r {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left!important;
+    font-weight: normal;
+    color: #57646F;
+    color: var(--gray600);
+    background: #FFF;
+    background: var(--gray0);
+    color: #57646F;
+    color: var(--gray600);
+    text-transform: capitalize;
+    font-family: "Roboto",sans-serif;
+}
+
+.css-1oq0a1y {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left!important;
+    font-weight: normal;
+    color: #57646F;
+    color: var(--gray600);
+    background: #FFF;
+    background: var(--gray0);
+    color: #57646F;
+    color: var(--gray600);
+    font-family: "Roboto",sans-serif;
+}
+
+.css-4qokog {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left!important;
+    font-weight: normal;
+    color: #57646F;
+    color: var(--gray600);
+    background: #FFF;
+    background: var(--gray0);
+}
+
+.css-4qokog >* {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.css-4qokog >a:first-of-type img {
+    margin-left: 0;
+}
+
+.css-4qokog >a img {
+    display: inline-block;
+    margin-left: 8px;
+    border-radius: 50%;
+}
+
+.css-j6nsb0 {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left!important;
+    font-weight: normal;
+    color: #57646F;
+    color: var(--gray600);
+    background: #FFF;
+    background: var(--gray0);
+    color: #57646F;
+    color: var(--gray600);
+}
+
+.css-147gr6a th:last-of-type, .css-147gr6a td:last-of-type {
+    padding-right: 12px;
+}
+
+.css-oa0foq {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left!important;
+    font-weight: normal;
+    color: #57646F;
+    color: var(--gray600);
+    background: #FFF;
+    background: var(--gray0);
+    font-family: "Roboto",sans-serif;
+}
+
+.css-oa0foq >div:nth-of-type(1) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.css-12hhsu4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.css-oa0foq >* {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.css-oa0foq >div:nth-of-type(1) >.chart {
+    width: 130px;
+}
+
+.css-12hhsu4>div:nth-of-type(1) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    height: 20px;
+    background-color: #E84057;
+    background-color: var(--red500);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.css-12hhsu4>div:nth-of-type(1) .win {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 61%;
+    background-color: #5383E8;
+    background-color: var(--main500);
+}
+
+.css-12hhsu4>div:nth-of-type(1) .w {
+    margin-left: 8px;
+}
+
+.css-12hhsu4>div:nth-of-type(1) .w, .css-12hhsu4>div:nth-of-type(1) .l {
+    position: relative;
+    font-size: 11px;
+    color: #fff;
+}
+
+.css-12hhsu4>div:nth-of-type(1) .l {
+    margin-right: 8px;
+}
+
+.css-oa0foq >div:nth-of-type(1) >.text {
+    margin-left: 8px;
+    font-size: 11px;
+    color: #E84057!important;
+    color: var(--red500)!important;
+}
+
