@@ -59,6 +59,8 @@ const textMap = {
     register: '회원가입',
 };
 
+
+
 //객체 비구조화할당을 사용하여 해당 값들을 객체로부터 추출
 const AuthForm = ({type, form, onChange, onSubmit, error}) => {
     const text = textMap[type];

@@ -1,4 +1,69 @@
 import React from "react";
+import TopHeaderMenuItem from "./TopHeaderMenuItem";
+import HeaderThemeButton from "./HeaderThemeButton";
+
+const topMenu = [
+    {
+        title: "리그오브레전드",
+        imageSrc: "https://opgg-gnb.akamaized.net/static/images/icons/img-navi-lol-white.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754",
+        link:"",
+        marker:"",
+    },
+    {
+        title: "데스크톱",
+        imageSrc: "https://opgg-gnb.akamaized.net/static/images/icons/01-icon-00-logo-icon-opggsquare.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754",
+        link:"https://op.gg/desktop/",
+        marker:"",
+    },
+    {
+        title: "전략적 팀 전투",
+        imageSrc: "https://opgg-gnb.akamaized.net/static/images/icons/img_navi_tft-whte.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754",
+        link:"https://tft.op.gg",
+        marker:"N",
+    },
+    {
+        title: "발로란트",
+        imageSrc: "https://opgg-gnb.akamaized.net/static/images/icons/img-navi-valorant-white.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754",
+        link:"https://valorant.op.gg",
+        marker:"B",
+    },
+    {
+        title: "배틀그라운드",
+        imageSrc: "https://opgg-gnb.akamaized.net/static/images/icons/img-navi-pubg-gray.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754",
+        link:"https://pubg.op.gg",
+        marker:"",
+    },
+    {
+        title: "오버워치2",
+        imageSrc: "https://opgg-gnb.akamaized.net/static/images/icons/img-navi-overwatch-gray.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754",
+        link:"https://overwatch.op.gg",
+        marker:"N",
+    },
+    {
+        title: "이터널 리턴",
+        imageSrc: "https://opgg-gnb.akamaized.net/static/images/icons/img_navi_bs.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754",
+        link:"https://er.op.gg",
+        marker:"",
+    },
+    {
+        title: "이스포츠",
+        imageSrc: "https://opgg-gnb.akamaized.net/static/images/icons/img_navi_esports.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754",
+        link:"https://esports.op.gg",
+        marker:"",
+    },
+    {
+        title: "톡피지지",
+        imageSrc: "https://opgg-gnb.akamaized.net/static/images/icons/img-navi-talk-white.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754",
+        link:"https://talk.op.gg",
+        marker:"",
+    },
+    {
+        title: "Duo",
+        imageSrc: "https://opgg-gnb.akamaized.net/static/images/icons/img-navi-duo-gray.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754",
+        link:"https://duo.op.gg",
+        marker:"",
+    },
+]
 
 const HeaderTopMenu = () => {
     return <>
@@ -8,91 +73,14 @@ const HeaderTopMenu = () => {
             </a>
             <nav>
                 <ul>
-                    <li>
-                        <span>
-                            <img src="https://opgg-gnb.akamaized.net/static/images/icons/img-navi-lol-white.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754" width="24" alt="리그오브레전드" height="24"/>
-                            <span>리그오브레전드</span>
-                        </span>
-                    </li>
-                    <li>
-                        <a href="https://op.gg/desktop/">
-                            <img src="https://opgg-gnb.akamaized.net/static/images/icons/01-icon-00-logo-icon-opggsquare.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754" width="24" alt="데스크톱" height="24"/>
-                            <span>데스크톱</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://tft.op.gg">
-                            <img src="https://opgg-gnb.akamaized.net/static/images/icons/img_navi_tft-whte.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754" width="24" alt="전략적 팀 전투" height="24"/>
-                            <span className="css-13oevom e8qzvbh0">
-                                N
-                            </span>
-                            <span>
-                                전략적 팀 전투
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://valorant.op.gg">
-                            <img src="https://opgg-gnb.akamaized.net/static/images/icons/img-navi-valorant-white.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754" width="24" alt="발로란트" height="24" />
-                            <span className="css-13oevom e8qzvbh0">
-                                B
-                            </span>
-                            <span>
-                                발로란트
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://pubg.op.gg">
-                            <img src="https://opgg-gnb.akamaized.net/static/images/icons/img-navi-pubg-gray.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754" width="24" alt="배틀그라운드" height="24"/>
-                            <span>
-                                배틀그라운드
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://overwatch.op.gg">
-                            <img src="https://opgg-gnb.akamaized.net/static/images/icons/img-navi-overwatch-gray.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754" width="24" alt="오버워치2" height="24"/>
-                            <span className="css-13oevom e8qzvbh0">
-                                N
-                            </span>
-                            <span>
-                                오버워치2
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://er.op.gg">
-                            <img src="https://opgg-gnb.akamaized.net/static/images/icons/img_navi_bs.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754" width="24" alt="이터널 리턴" height="24"/>
-                            <span>
-                                이터널 리턴
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://esports.op.gg">
-                            <img src="https://opgg-gnb.akamaized.net/static/images/icons/img_navi_esports.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754" width="24" alt="이스포츠" height="24"/>
-                            <span>
-                                이스포츠
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://talk.op.gg">
-                            <img src="https://opgg-gnb.akamaized.net/static/images/icons/img-navi-talk-white.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754" width="24" alt="톡피지지" height="24"/>
-                            <span>
-                                톡피지지
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://duo.op.gg">
-                            <img src="https://opgg-gnb.akamaized.net/static/images/icons/img-navi-duo-gray.svg?image=q_auto,f_webp,w_48&amp;v=1684072072754" width="24" alt="Duo" height="24"/>
-                            <span>
-                                Duo
-                            </span>
-                        </a>
-                    </li>
+                    {topMenu.map(({title, imageSrc, link, marker}) => 
+                        (<TopHeaderMenuItem
+                            key={title}
+                            title={title}
+                            imageSrc={imageSrc}
+                            link={link}
+                            marker={marker}
+                    />))}
                 </ul>
             </nav>
             <div className="css-h3ax4d ex7daql2">
@@ -100,20 +88,11 @@ const HeaderTopMenu = () => {
                     <img src="https://s-lol-web.op.gg/images/icon/icon-more.svg?v=1684072072754" width="24" alt="more" height="24"/>
                 </button>
             </div>
-            <div style={{position:"relative",fontSize:0}} className="">
-                <button className="css-1d0m9ic e2826cc0">
-                    <span className="hidden">
-                        Theme Button
-                    </span>
-                </button>
-            </div>
-            <div style={{position:"relative",fontSize:0,marginLeft:"8px"}} className="">
-                <button className="css-zx4hnl e13z6i6i0">
-                    <span className="hidden">
-                        Theme Button
-                    </span>
-                </button>
-            </div>
+            <HeaderThemeButton className={"css-1d0m9ic e2826cc0"}/>
+            <HeaderThemeButton 
+                className={"css-zx4hnl e13z6i6i0"}
+                marginLeft={"8px"}
+            />
             <div className="css-1i10ah0 eunllsz0">
                 <img src="https://s-lol-web.op.gg/images/icon/icon-world-light-blue.svg?v=1684072072754" width="24" alt="" height="24" />
                 <div className="css-1mkbl4u e5qh6tw3">
