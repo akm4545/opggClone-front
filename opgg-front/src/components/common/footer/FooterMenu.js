@@ -1,5 +1,90 @@
 import React from "react";
 
+const productMenuArray = [
+    {
+        link: "https://op.gg",
+        title:"리그오브레전드",
+        imageYn:true,
+    },
+    {
+        link: "https://op.gg/desktop/",
+        title:"데스크톱",
+        imageYn:true,
+    },
+    {
+        link: "https://tft.op.gg",
+        title:"전략적 팀 전투",
+        imageYn:true,
+    },
+    {
+        link: "https://valorant.op.gg",
+        title:"발로란트",
+        imageYn:true,
+    },
+    {
+        link: "https://pubg.op.gg",
+        title:"배틀그라운드",
+        imageYn:true,
+    },
+    {
+        link: "https://overwatch.op.gg",
+        title:"오버워치2",
+        imageYn:true,
+    },
+    {
+        link: "https://er.op.gg",
+        title:"이터널 리턴",
+        imageYn:true,
+    },
+    {
+        link: "https://esports.op.gg",
+        title:"이스포츠",
+        imageYn:true,
+    },
+    {
+        link: "https://talk.op.gg",
+        title:"톡피지지",
+        imageYn:true,
+    },
+    {
+        link: "https://duo.op.gg",
+        title:"Duo",
+        imageYn:true,
+    },
+];
+
+const appMenuArray = [
+    {
+        link: "https://play.google.com/store/apps/details?id=gg.op.lol.android&amp;referrer=utm_source%3Dadblock%26utm_medium%3Dbanner",
+        title:"OP.GG Android App",
+        imageYn:true,
+    },
+    {
+        link: "https://itunes.apple.com/kr/app/op-gg-%EC%98%A4%ED%94%BC%EC%A7%80%EC%A7%80/id605722237?mt=8",
+        title:"OP.GG iOS App",
+        imageYn:true,
+    },
+    {
+        link: "https://play.google.com/store/apps/details?id=gg.ifi.playtime",
+        title:"IFI.GG Android App",
+        imageYn:false,
+    },
+    {
+        link: "https://itunes.apple.com/kr/app/id1455300411?mt=8",
+        title:"IFI.GG iOS App",
+        imageYn:false,
+    },
+];
+
+const FooterMenuItem = ({link, title, imageYn}) => {
+    return <>
+        <a href={link} target="_blank" rel="noreferrer">
+            {title}
+            {imageYn && (<img src="https://s-lol-web.op.gg/images/icon/icon-game.svg?v=1684072072754" width="16" alt={title} className="game" height="16"/>)}
+        </a>
+    </>;
+};
+
 const FooterMenu = () => {
     return <>
         <section>
@@ -20,61 +105,25 @@ const FooterMenu = () => {
             <div>
                 <strong className="title">Products</strong>
                 <nav>
-                    <a href="https://op.gg" target="_blank" rel="noreferrer">
-                        리그오브레전드
-                        <img src="https://s-lol-web.op.gg/images/icon/icon-game.svg?v=1684072072754" width="16" alt="리그오브레전드" className="game" height="16"/>
-                    </a>
-                    <a href="https://op.gg/desktop/" target="_blank" rel="noreferrer">
-                        데스크톱<img src="https://s-lol-web.op.gg/images/icon/icon-game.svg?v=1684072072754" width="16" alt="데스크톱" className="game" height="16"/>
-                    </a>
-                    <a href="https://tft.op.gg" target="_blank" rel="noreferrer">전략적 팀 전투
-                        <img src="https://s-lol-web.op.gg/images/icon/icon-game.svg?v=1684072072754" width="16" alt="전략적 팀 전투" className="game" height="16"/>
-                    </a>
-                    <a href="https://valorant.op.gg" target="_blank" rel="noreferrer">
-                        발로란트
-                        <img src="https://s-lol-web.op.gg/images/icon/icon-game.svg?v=1684072072754" width="16" alt="발로란트" className="game" height="16"/>
-                    </a>
-                    <a href="https://pubg.op.gg" target="_blank" rel="noreferrer">
-                        배틀그라운드
-                        <img src="https://s-lol-web.op.gg/images/icon/icon-game.svg?v=1684072072754" width="16" alt="배틀그라운드" className="game" height="16"/>
-                    </a>
-                    <a href="https://overwatch.op.gg" target="_blank" rel="noreferrer">
-                        오버워치2
-                        <img src="https://s-lol-web.op.gg/images/icon/icon-game.svg?v=1684072072754" width="16" alt="오버워치2" className="game" height="16"/>
-                    </a>
-                    <a href="https://er.op.gg" target="_blank" rel="noreferrer">
-                        이터널 리턴
-                        <img src="https://s-lol-web.op.gg/images/icon/icon-game.svg?v=1684072072754" width="16" alt="이터널 리턴" className="game" height="16"/>
-                    </a>
-                    <a href="https://esports.op.gg" target="_blank" rel="noreferrer">
-                        이스포츠
-                        <img src="https://s-lol-web.op.gg/images/icon/icon-game.svg?v=1684072072754" width="16" alt="이스포츠" className="game" height="16"/>
-                    </a>
-                    <a href="https://talk.op.gg" target="_blank" rel="noreferrer">
-                        톡피지지<img src="https://s-lol-web.op.gg/images/icon/icon-game.svg?v=1684072072754" width="16" alt="톡피지지" className="game" height="16"/>
-                    </a>
-                    <a href="https://duo.op.gg" target="_blank" rel="noreferrer">
-                        Duo
-                        <img src="https://s-lol-web.op.gg/images/icon/icon-game.svg?v=1684072072754" width="16" alt="Duo" className="game" height="16"/>
-                    </a>
+                    {productMenuArray.map(({link, title, imageYn}) => (
+                        <FooterMenuItem
+                            link={link}
+                            title={title}
+                            imageYn={imageYn}
+                        />
+                    ))}
                 </nav>
             </div>
             <div>
                 <strong className="title">Apps</strong>
                 <nav>
-                    <a href="https://play.google.com/store/apps/details?id=gg.op.lol.android&amp;referrer=utm_source%3Dadblock%26utm_medium%3Dbanner" target="_blank" rel="noreferrer">OP.GG Android App
-                        <img src="https://s-lol-web.op.gg/images/icon/icon-game.svg?v=1684072072754" width="16" alt="game" className="game" height="16"/>
-                    </a>
-                    <a href="https://itunes.apple.com/kr/app/op-gg-%EC%98%A4%ED%94%BC%EC%A7%80%EC%A7%80/id605722237?mt=8" target="_blank" rel="noreferrer">
-                        OP.GG iOS App
-                        <img src="https://s-lol-web.op.gg/images/icon/icon-game.svg?v=1684072072754" width="16" alt="game" className="game" height="16"/>
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=gg.ifi.playtime" target="_blank" rel="noreferrer">
-                        IFI.GG Android App
-                    </a>
-                    <a href="https://itunes.apple.com/kr/app/id1455300411?mt=8" target="_blank" rel="noreferrer">
-                        IFI.GG iOS App
-                    </a>
+                    {appMenuArray.map(({link, title, imageYn}) => (
+                        <FooterMenuItem
+                            link={link}
+                            title={title}
+                            imageYn={imageYn}
+                        />
+                    ))}
                 </nav>
             </div>
             <div>

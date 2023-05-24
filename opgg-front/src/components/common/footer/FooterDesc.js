@@ -1,5 +1,28 @@
 import React from "react";
 
+const snsItmeArray = [
+    {
+        link:"https://twitter.com/globalopgg/",
+        imageSrc:"https://s-lol-web.op.gg/images/icon/icon-logo-twitter.svg?v=1684072072754",
+    },
+    {
+        link:"https://www.instagram.com/opgginc/",
+        imageSrc:"https://s-lol-web.op.gg/images/icon/icon-logo-instagram.svg?v=1684072072754",
+    },
+    {
+        link:"https://www.facebook.com/lolopgg/",
+        imageSrc:"https://s-lol-web.op.gg/images/icon/icon-logo-facebook.svg?v=1684072072754",
+    },
+];
+
+const SnsImte = ({link, imageSrc}) => {
+    return <>
+        <a target="_blank" href={link} rel="noreferrer">
+            <img src={imageSrc} width="24" alt="twitter account" height="24" loading="lazy"/>
+        </a>
+    </>;
+};
+
 const FooterDesc = () => {
     return <>
         <section>
@@ -10,15 +33,12 @@ const FooterDesc = () => {
                 League of Legends © Riot Games, Inc.
             </small>
             <nav className="sns">
-                <a target="_blank" href="https://twitter.com/globalopgg/" rel="noreferrer">
-                    <img src="https://s-lol-web.op.gg/images/icon/icon-logo-twitter.svg?v=1684072072754" width="24" alt="twitter account" height="24" loading="lazy"/>
-                </a>
-                <a target="_blank" href="https://www.instagram.com/opgginc/" rel="noreferrer">
-                    <img src="https://s-lol-web.op.gg/images/icon/icon-logo-instagram.svg?v=1684072072754" width="24" alt="instagram account" height="24" loading="lazy"/>
-                </a>
-                <a target="_blank" href="https://www.facebook.com/lolopgg/" rel="noreferrer">
-                    <img src="https://s-lol-web.op.gg/images/icon/icon-logo-facebook.svg?v=1684072072754" width="24" alt="facebook account" height="24" loading="lazy"/>
-                </a>
+                {snsItmeArray.map(({link, imageSrc}) => (
+                    <SnsImte
+                        link={link}
+                        imageSrc={imageSrc}
+                    />
+                ))}
             </nav>
         </section>
     </>
