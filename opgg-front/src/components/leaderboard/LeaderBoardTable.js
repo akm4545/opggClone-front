@@ -1,6 +1,7 @@
 import React from "react";
+import LeaderBoardContent from "./LeaderBoardContent";
 
-const LeaderBoardTable = ({children}) => {
+const LeaderBoardTable = ({leaderBoardList, loading, err}) => {
     return <>
         <div className="css-ndvmk6 elfnyy5m0">
             <table className="css-147gr6a exo2f213">
