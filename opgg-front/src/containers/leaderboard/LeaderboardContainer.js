@@ -1,11 +1,13 @@
 import React, {useEffect} from "react";
 import { useDispatch, useSelector } from "../../../node_modules/react-redux/es/exports";
 import { leaderboardListAction } from "../../modules/leaderboard";
-import LeaderBoardTable from "../../components/leaderboard/LeaderBoardTable";
+import LeaderBoardWrapper from "../../components/leaderboard/LeaderBoardWrapper";
 import { useSearchParams } from "../../../node_modules/react-router-dom/dist/index";
 
 const LeaderboardContainer = () => {
     const [searchParams, setSearchParames] = useSearchParams();
+    const page = searchParams.get("page");
+
     const dispatch = useDispatch();
     const {leaderBoardList, loading, err} = useSelector(
         ({leaderboard, loading}) => {
@@ -18,11 +20,11 @@ const LeaderboardContainer = () => {
     ); 
 
     useEffect(() => {
-        dispatch(leaderboardListAction());
-    }, [dispatch]);
+        dispatch(leaderboardListAction({page}));
+    }, [dispatch, page]);
 
     return (
-        <LeaderBoardTable
+        <LeaderBoardWrapper
             leaderBoardList={leaderBoardList}
             loading={loading}
             err={err}

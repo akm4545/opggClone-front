@@ -4,7 +4,7 @@ import OpggFooter from "../components/common/footer/OpggFooter";
 import BodyHeaderMenu from "../components/common/bodyHeaderMenu/BodyHeaderMenu";
 import BodySide from "../components/common/bodySideAD/BodySide";
 import BodyHeader from "../components/common/bodyHeaderAD/BodyHeader";
-import LeaderBoardWrapper from "../components/leaderboard/LeaderBoardWrapper";
+import LeaderboardContainer from "../containers/leaderboard/LeaderboardContainer";
 
 const LeaderboardPage = () => {
     return <>
@@ -12,7 +12,7 @@ const LeaderboardPage = () => {
             <BodyHeaderMenu></BodyHeaderMenu>
             <BodySide></BodySide>
             <BodyHeader></BodyHeader>
-            <LeaderBoardWrapper></LeaderBoardWrapper>
+            <LeaderboardContainer></LeaderboardContainer>
             <OpggFooter></OpggFooter>
         </>
 }

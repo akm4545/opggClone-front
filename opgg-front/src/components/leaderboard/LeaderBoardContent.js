@@ -1,6 +1,7 @@
 import React from "react";
 
-const LeaderBoardContent = () => {
+const LeaderBoardContent = ({leaderBoard}) => {
+    console.log(leaderBoard);
     return <>
         <tr id="댕청잇" className="css-1kk0pwf e1g3wlsd10">
             <td className="css-oqjmdl e1g3wlsd9">1</td>

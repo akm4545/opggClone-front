@@ -27,7 +27,12 @@ const LeaderBoardTable = ({leaderBoardList, loading, err}) => {
                 </tr>
             </thead>
             <tbody>
-                {children}
+                {!loading && leaderBoardList && (leaderBoardList.map(leaderBoard => (
+                    <LeaderBoardContent
+                        key={leaderBoard.name}
+                        leaderBoard={leaderBoard}
+                    />
+                )))}
             </tbody>
             </table>
         </div>
