@@ -8,7 +8,7 @@ const TempIndex = () => {
             <div>
                 <ul>
                     <li>
-                        <Link to="/leaderboards">랭킹</Link>
+                        <Link to="/leaderboards?page=1">랭킹</Link>
                     </li> 
                     <li>
                         임시1 링크

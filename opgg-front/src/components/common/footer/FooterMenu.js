@@ -107,6 +107,7 @@ const FooterMenu = () => {
                 <nav>
                     {productMenuArray.map(({link, title, imageYn}) => (
                         <FooterMenuItem
+                            key={title}
                             link={link}
                             title={title}
                             imageYn={imageYn}
@@ -119,6 +120,7 @@ const FooterMenu = () => {
                 <nav>
                     {appMenuArray.map(({link, title, imageYn}) => (
                         <FooterMenuItem
+                            key={title}
                             link={link}
                             title={title}
                             imageYn={imageYn}

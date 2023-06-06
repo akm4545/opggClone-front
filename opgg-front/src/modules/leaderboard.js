@@ -1,14 +1,14 @@
 import { createAction, handleActions } from "redux-actions";
 import {takeLatest} from 'redux-saga/effects';
 import createRequestSaga, {createRequestActionTypes} from "../lib/createRequestSage";
-import * as leaderboardApi from "../lib/api/board";
+import * as leaderboardApi from "../lib/api/leaderBoard";
 
 const [LEADERBOARD_LIST, LEADERBOARD_LIST_SUCCESS, LEADERBOARD_LIST_FAILURE] = createRequestActionTypes("leaderboard/LIST");
 
 export const leaderboardListAction = createAction(LEADERBOARD_LIST, page => page);
 
 const initState = {
-    leaderboardList: "",
+    leaderboardList: null,
     err: null,
 };
 

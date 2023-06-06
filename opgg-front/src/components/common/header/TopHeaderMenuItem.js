@@ -1,8 +1,6 @@
 import React from "react";
 
 const TopHeaderMenuItem = ({title, imageSrc, link, marker}) => {
-    console.log(link)
-
     return <>
         <li>
             {link ? (

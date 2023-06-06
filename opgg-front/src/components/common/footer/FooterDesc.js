@@ -35,6 +35,7 @@ const FooterDesc = () => {
             <nav className="sns">
                 {snsItmeArray.map(({link, imageSrc}) => (
                     <SnsImte
+                        key={link}
                         link={link}
                         imageSrc={imageSrc}
                     />

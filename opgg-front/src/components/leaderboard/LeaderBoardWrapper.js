@@ -12,7 +12,7 @@ const LeaderBoardWrapper = ({leaderBoardList, loading, err}) => {
                 leaderBoardList={leaderBoardList}
                 loading={loading}
                 err={err}
-            ></LeaderBoardTable>
+            />
         </div>
     </>
 };

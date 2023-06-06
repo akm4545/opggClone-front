@@ -43,6 +43,7 @@ const HeaderBottomMenu = () => {
                 <ul className="route-list">
                     {headerBottomMenuArray.map(({link, menu}) => (
                         <HeaderBottomMenuItem
+                            key={menu}
                             link={link}
                             menu={menu}
                         />
