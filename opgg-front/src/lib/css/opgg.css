@@ -2855,7 +2855,7 @@ html {
     top: 0;
     left: 0;
     height: 20px;
-    width: 61%;
+    /* width: 61%; */
     background-color: #5383E8;
     background-color: var(--main500);
 }

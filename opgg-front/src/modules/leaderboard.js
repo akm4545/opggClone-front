@@ -8,7 +8,7 @@ const [LEADERBOARD_LIST, LEADERBOARD_LIST_SUCCESS, LEADERBOARD_LIST_FAILURE] = c
 export const leaderboardListAction = createAction(LEADERBOARD_LIST, page => page);
 
 const initState = {
-    leaderboardList: null,
+    leaderboardList: "",
     err: null,
 };
 
@@ -19,10 +19,10 @@ export function* leaderboardSaga(){
 };
 
 const leaderboard = handleActions({
-    [LEADERBOARD_LIST_SUCCESS]: (state, {payload: {leaderboard, code}}) => ({
+    [LEADERBOARD_LIST_SUCCESS]: (state, {payload, code}) => ({
         ...state,
-        leaderboardList: leaderboard,
-        err: code !== "200"
+        leaderboardList: payload,
+        err: code !== 0
     }),
     [LEADERBOARD_LIST_FAILURE]: (state, {payload: error}) => ({
         ...state,

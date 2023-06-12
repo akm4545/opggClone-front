@@ -1,20 +1,19 @@
 import React from "react";
 
-const LeaderBoardContent = ({leaderBoard}) => {
-    console.log(leaderBoard);
+const LeaderBoardContent = ({leaderboard, percentageOfvictories}) => {
     return <>
-        <tr id="댕청잇" className="css-1kk0pwf e1g3wlsd10">
+        <tr id={leaderboard.summonerName} className="css-1kk0pwf e1g3wlsd10">
             <td className="css-oqjmdl e1g3wlsd9">1</td>
             <td className="css-1vdhwjr e1g3wlsd8">
                 <a href="/summoners/kr/%EB%8C%95%EC%B2%AD%EC%9E%87">
                     <img
                         src="https://opgg-static.akamaized.net/meta/images/profile_icons/profileIcon4206.jpg?image=q_auto,f_webp,w_64&amp;v=1684731456767"
                         width="32" alt="profile_image" className="icon" height="32"/>
-                        <strong className="summoner-name">댕청잇</strong>
+                        <strong className="summoner-name">{leaderboard.summonerName}</strong>
                 </a>
             </td>
-            <td className="css-1gm6o8r e1g3wlsd7">challenger</td>
-            <td className="css-1oq0a1y e1g3wlsd6">1,846 LP</td>
+            <td className="css-1gm6o8r e1g3wlsd7">{leaderboard.tier}</td>
+            <td className="css-1oq0a1y e1g3wlsd6">{leaderboard.leaguePoints}</td>
             <td className="css-4qokog e1g3wlsd3">
                 <a href="/champions/Rakan">
                     <div style={{position: "relative"}} className="">
@@ -42,11 +41,11 @@ const LeaderBoardContent = ({leaderBoard}) => {
             <td className="css-oa0foq e1g3wlsd4">
                 <div className="css-12hhsu4 e1qp7b622">
                     <div className="chart">
-                        <div className="win"></div>
-                        <div className="w">222W</div>
-                        <div className="l">139L</div>
+                        <div className="win" style={{width: `${percentageOfvictories}%`}}></div>
+                        <div className="w">{leaderboard.wins}W</div>
+                        <div className="l">{leaderboard.losses}L</div>
                     </div>
-                    <div className="text">61%</div>
+                    <div className="text">{percentageOfvictories}%</div>
                 </div>
             </td>
         </tr>

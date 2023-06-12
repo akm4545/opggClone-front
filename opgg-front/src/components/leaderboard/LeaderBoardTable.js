@@ -1,7 +1,7 @@
 import React from "react";
 import LeaderBoardContent from "./LeaderBoardContent";
 
-const LeaderBoardTable = ({leaderBoardList, loading, err}) => {
+const LeaderBoardTable = ({leaderboardList, loading, err, percentageOfvictoriesCalc}) => {
     return <>
         <div className="css-ndvmk6 elfnyy5m0">
             <table className="css-147gr6a exo2f213">
@@ -27,10 +27,11 @@ const LeaderBoardTable = ({leaderBoardList, loading, err}) => {
                 </tr>
             </thead>
             <tbody>
-                {leaderBoardList && (leaderBoardList.map(leaderBoard => (
+                {leaderboardList && (leaderboardList.map(leaderboard => (
                     <LeaderBoardContent
-                        key={leaderBoard.name}
-                        leaderBoard={leaderBoard}
+                        key={leaderboard.summonerName}
+                        leaderboard={leaderboard}
+                        percentageOfvictories={percentageOfvictoriesCalc(leaderboard)}
                     />
                 )))}
                 {loading && (<tr></tr>)}
