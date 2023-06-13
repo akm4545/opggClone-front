@@ -1,5 +1,6 @@
 import React from "react";
 import LeaderBoardContent from "./LeaderBoardContent";
+import LeaderBoardPageButton from "./LeaderBoardPageButton";
 
 const LeaderBoardTable = ({leaderboardList, loading, err, percentageOfvictoriesCalc}) => {
     return <>
@@ -37,6 +38,7 @@ const LeaderBoardTable = ({leaderboardList, loading, err, percentageOfvictoriesC
                 {loading && (<tr></tr>)}
             </tbody>
             </table>
+            <LeaderBoardPageButton></LeaderBoardPageButton>
         </div>
     </>
 };
