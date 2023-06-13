@@ -19,7 +19,7 @@ const MainBestPost = () => {
                             className="comment-count">[52]</span></div>
                         <ul className="meta-list">
                             <li>
-                                <div className="tooltip" style="position: relative;">7시간 전</div>
+                                <div className="tooltip" style={{position: "relative"}}>7시간 전</div>
                             </li>
                             <li>삼각탈출</li>
                         </ul>
@@ -38,7 +38,7 @@ const MainBestPost = () => {
                             className="comment-count">[67]</span></div>
                         <ul className="meta-list">
                             <li>
-                                <div className="tooltip" style="position: relative;">11시간 전</div>
+                                <div className="tooltip" style={{position: "relative"}}>11시간 전</div>
                             </li>
                             <li>뚫린입</li>
                         </ul>
@@ -57,7 +57,7 @@ const MainBestPost = () => {
                             className="comment-count">[119]</span></div>
                         <ul className="meta-list">
                             <li>
-                                <div className="tooltip" style="position: relative;">12시간 전</div>
+                                <div className="tooltip" style={{position: "relative"}}>12시간 전</div>
                             </li>
                             <li>햄츄야</li>
                         </ul>
@@ -75,7 +75,7 @@ const MainBestPost = () => {
                             className="comment-count">[42]</span></div>
                         <ul className="meta-list">
                             <li>
-                                <div className="tooltip" style="position: relative;">10시간 전</div>
+                                <div className="tooltip" style={{position: "relative"}}>10시간 전</div>
                             </li>
                             <li>달콤쌉싸름한달고나</li>
                         </ul>
@@ -94,7 +94,7 @@ const MainBestPost = () => {
                             className="comment-count">[40]</span></div>
                         <ul className="meta-list">
                             <li>
-                                <div className="tooltip" style="position: relative;">9시간 전</div>
+                                <div className="tooltip" style={{position: "relative"}}>9시간 전</div>
                             </li>
                             <li>opgg01343423434234</li>
                         </ul>

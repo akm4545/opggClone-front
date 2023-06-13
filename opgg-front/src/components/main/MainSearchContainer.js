@@ -40,7 +40,7 @@ const MainSearchContainer = () => {
                     <div className=" "><label htmlFor="searchHome" className="label">Search</label>
                         <input
                             id="searchHome" name="search" autoComplete="off" type="text" placeholder="소환사명, 소환사명, ..."
-                            value=""/>
+                            defaultValue=""/>
                         <div className="css-1vu2yqv ecvb4lm0"></div>
                     </div>
                     <button type="submit">.GG</button>
