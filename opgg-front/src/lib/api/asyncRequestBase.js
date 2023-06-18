@@ -1,8 +1,6 @@
 const asyncRequestBase = async(method, url, body) => {
     const decodeUrl = decodeURI(url);
 
-    console.log(decodeUrl);
-
     let response = await fetch(decodeUrl, {
         method: method,
         headers: {

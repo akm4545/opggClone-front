@@ -47,8 +47,6 @@ const LeaderboardContainer = () => {
     };
 
     useEffect(() => {
-        console.log(userName);
-
         if(userName == null){
             moveTop();
             dispatch(leaderboardListAction({page}));
