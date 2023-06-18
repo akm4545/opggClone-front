@@ -1,9 +1,9 @@
 import React from "react";
 
-const LeaderBoardContent = ({leaderboard, percentageOfvictories}) => {
+const LeaderBoardContent = ({leaderboard, percentageOfvictories, userName, leaderBoardIndex}) => {
     return <>
-        <tr id={leaderboard.summonerName} className="css-1kk0pwf e1g3wlsd10">
-            <td className="css-oqjmdl e1g3wlsd9">1</td>
+        <tr id={leaderboard.summonerName} className={`${userName === leaderboard.summonerName ? "css-17j1uco": "css-1kk0pwf"} e1g3wlsd10`}>
+            <td className="css-oqjmdl e1g3wlsd9">{leaderBoardIndex}</td>
             <td className="css-1vdhwjr e1g3wlsd8">
                 <a href="/summoners/kr/%EB%8C%95%EC%B2%AD%EC%9E%87">
                     <img
