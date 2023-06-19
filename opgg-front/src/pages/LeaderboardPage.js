@@ -9,7 +9,15 @@ import LeaderboardContainer from "../containers/leaderboard/LeaderboardContainer
 const LeaderboardPage = () => {
     return <>
             <OpggHeader></OpggHeader>
-            <BodyHeaderMenu></BodyHeaderMenu>
+            <BodyHeaderMenu
+                menuName={"랭킹"}
+            >
+                <h2 className="css-1saok50 e1v8numf0">
+                    <a className="active css-r0jqv0 e1di4bas3" href="/leaderboards/tier">
+                        랭킹
+                    </a>
+                </h2>
+            </BodyHeaderMenu>
             <BodySide></BodySide>
             <BodyHeader></BodyHeader>
             <LeaderboardContainer></LeaderboardContainer>

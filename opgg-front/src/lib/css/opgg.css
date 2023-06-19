@@ -3284,13 +3284,13 @@ element.style {
     justify-content: flex-end;
 }
 
-.css-1uwb27f .esports-menu-container nav button.active {
+/* .css-1uwb27f .esports-menu-container nav button.active {
     border-top-color: ;
     border-right-color: ;
     border-left-color: ;
     color: var(--main600) !important;
     border-bottom: 2px solid;
-}
+} */
 
 .css-1uwb27f .esports-menu-container nav button {
     padding: 0px 8px 6px;
@@ -3647,4 +3647,54 @@ option {
     padding-right: 24px;
     padding-left: 12px;
     height: 100%;
+}
+
+.css-1pdmpbt {
+    width: 380px;
+    padding: 0px;
+    margin: 104px auto 50px;
+    color: var(--gray900);
+    text-align: center;
+}
+
+.css-1pdmpbt .title {
+    line-height: 32px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.css-1pdmpbt .description {
+    margin-top: 24px;
+    font-size: 15px;
+    white-space: pre-line;
+}
+
+.css-1pdmpbt .description a {
+    color: rgb(83, 131, 232);
+    text-decoration: underline;
+}
+
+.css-1pdmpbt .logo {
+    margin-top: 40px;
+}
+
+.css-1pdmpbt .actions {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.css-1pdmpbt .actions button, .css-1pdmpbt .actions a {
+    display: inline-block;
+    min-width: 94px;
+    height: 40px;
+    line-height: 38px;
+    padding: 0px 15px;
+    font-size: 14px;
+    background: rgb(83, 131, 232);
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid rgb(83, 131, 232);
 }
