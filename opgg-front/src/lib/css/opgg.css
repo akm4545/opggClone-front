@@ -2881,3 +2881,682 @@ html {
     color: var(--red500)!important;
 }
 
+.css-wlca88{width:100%;min-height:250px;margin-top:24px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;max-width:1080px;margin-left:auto;margin-right:auto;position:relative;background:#FFF;background:var(--gray0);border-radius:4px;padding:8px 0;}.css-wlca88:after{content:"OP.GG";position:absolute;text-align:center;font-size:14px;left:50%;top:50%;color:#FFF;color:var(--gray0);-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%);z-index:-100;}
+
+.css-wlca88 >*{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}
+
+.css-16tu8nb {
+    display: flex;
+    width: 1080px;
+    margin: 36px auto 0px;
+    box-sizing: border-box;
+}
+
+
+.css-16tu8nb > :first-of-type {
+    flex-basis: 536px;
+    margin-right: 8px;
+}
+
+.css-16tu8nb > section, .css-16tu8nb > div {
+    background-color: var(--gray0);
+    border-radius: 4px;
+    min-height: 405px;
+}
+
+.css-1rs7x7q {
+    width: 100%;
+    overflow: hidden;
+}
+
+section {
+    display: block;
+}
+
+.css-16tu8nb > :last-of-type {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    max-width: 536px;
+}
+
+.css-1rs7x7q h2 a {
+    display: block;
+    padding: 17px 0px 16px 20px;
+    line-height: 17px;
+    font-size: 14px;
+    color: var(--gray900);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.css-1rs7x7q .community-list {
+    padding-bottom: 13px;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.css-1rs7x7q .community-list.half > article {
+    width: 100%;
+}
+
+.css-1vvorwk {
+    box-sizing: border-box;
+    width: 50%;
+}
+
+
+element.style {
+}
+
+ .css-1vvorwk .text {
+     flex: 1 1 0%;
+     padding: 0px 20px;
+     box-sizing: border-box;
+     overflow: hidden;
+ }
+
+.css-1vvorwk .thumbnail {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 56px;
+    width: 100px;
+    text-align: center;
+    overflow: hidden;
+    flex-basis: 100px;
+}
+
+.css-1vvorwk .meta-list {
+    margin-top: 6px;
+    color: rgb(135, 146, 146);
+    line-height: 15px;
+    font-size: 12px;
+}
+
+.css-1vvorwk .meta-list li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.e1e5ckp90 {
+    flex-basis: 55px;
+    color: var(--gray900);
+    text-align: center;
+    font-size: 18px;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.css-1vvorwk:nth-of-type(1) a, .css-1vvorwk:nth-of-type(6) a {
+    border-top: 0px none;
+}
+
+.css-1vvorwk .title-container {
+    font-size: 14px;
+    font-weight: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.css-1vvorwk a {
+    padding: 12px 0px;
+    margin: 0px 12px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: var(--gray200);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.css-1vvorwk .comment-count {
+    margin-left: 4px;
+    color: var(--main500);
+}
+
+.css-1vvorwk .meta-list li + li {
+    margin-left: 12px;
+}
+
+.css-1uwb27f {
+    border-radius: 4px;
+    background-color: var(--gray0);
+    display: flex;
+    flex-direction: column;
+}
+
+.css-1uwb27f .esports-header {
+    display: flex;
+    height: 85px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px 12px;
+    border-bottom: 1px solid;
+}
+
+.css-1uwb27f .border-gray {
+    border-color: var(--gray200) !important;
+}
+
+.css-1uwb27f * {
+    color: var(--gray900);
+    box-sizing: border-box;
+    font-family: Roboto !important;
+}
+
+.css-1uwb27f .esports-header-pow .esports-titles-pow {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.css-1uwb27f .esports-header-pow .esports-titles-pow h2 {
+    height: 22px;
+}
+
+.css-1uwb27f .esports-logo-img {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-1uwb27f .esports-header-pow .esports-titles-pow h3 {
+    margin-top: 0px;
+    color: var(--gray900);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.css-1uwb27f .esports-header-pow .esports-logo-pow {
+    position: relative;
+    height: 100%;
+    width: 123px;
+}
+
+.css-1uwb27f .esports-main {
+    display: flex;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+}
+
+.css-1uwb27f .esports-main > div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.css-1uwb27f .esports-menu-container {
+    width: 100%;
+    height: 58px;
+    padding: 8px 12px 0px;
+    border-bottom: 1px solid;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.css-k5drt6 ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+}
+
+.css-df6kpy {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    height: 0px;
+    min-height: 52px;
+}
+
+.css-df6kpy > a, .css-df6kpy > div {
+    display: table;
+    width: 100%;
+    height: 100%;
+    border-collapse: separate;
+    border-spacing: 8px 0px;
+}
+
+.css-df6kpy.bold * {
+    font-weight: bold;
+}
+
+ .css-df6kpy .esports-rank {
+     text-align: center;
+     font-size: 12px;
+     font-weight: normal;
+     font-style: italic;
+     width: 15px;
+ }
+
+.css-df6kpy > a div, .css-df6kpy > div div {
+    font-size: 12px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.css-df6kpy .worlds-team-logo {
+    width: 20px;
+}
+
+.css-df6kpy.team .worlds-win-lose, .css-df6kpy.po .esports-win-lose {
+    width: 48px;
+}
+
+.css-df6kpy.team .worlds-team-point, .css-df6kpy.po .esports-team-point {
+    width: 20px;
+}
+
+.css-1uwb27f .esports-header-pow .esports-logo-pow .esports-logo-league {
+    opacity: 0.2;
+    object-fit: cover;
+}
+
+.css-1uwb27f .esports-header-pow .esports-logo-pow .esports-logo-img {
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.css-1uwb27f .esports-header-pow .esports-logo-pow .esports-logo-player {
+    object-fit: contain;
+}
+
+.css-df6kpy.team .esports-win-lose, .css-df6kpy.po .esports-win-lose {
+    width: 48px;
+}
+
+.css-df6kpy.team .esports-team-point, .css-df6kpy.po .esports-team-point {
+    width: 20px;
+}
+
+.css-1uwb27f .esports-menu-container nav {
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+
+.css-1uwb27f .esports-menu-container nav button.active {
+    border-top-color: ;
+    border-right-color: ;
+    border-left-color: ;
+    color: var(--main600) !important;
+    border-bottom: 2px solid;
+}
+
+.css-1uwb27f .esports-menu-container nav button {
+    padding: 0px 8px 6px;
+    font-size: 14px;
+}
+
+.css-1uwb27f .esports-menu-container {
+    width: 100%;
+    height: 58px;
+    padding: 8px 12px 0px;
+    border-bottom: 1px solid;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.css-7u9n4g ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.css-1kqcty5 {
+    padding: 34px 20px 31px;
+    height: 158px;
+    display: flex;
+    width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.css-1kqcty5 a {
+    width: 100%;
+    display: inline-flex;
+    place-content: center;
+    -webkit-box-pack: center;
+    flex-direction: column;
+}
+
+.css-1kqcty5 a > div {
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.css-1kqcty5 a div {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-1kqcty5 .esports-team-container img {
+    object-fit: contain;
+}
+
+.css-1kqcty5 .esports-score-container {
+    flex-basis: 77px;
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.css-1gz9fz7.not_started {
+    border-color: var(--gray250);
+}
+
+.css-1kqcty5 a > div + div {
+    margin-top: 10px;
+}
+
+.css-1kqcty5 .esports-match-time {
+    white-space: pre;
+    font-size: 14px;
+}
+
+.css-1kqcty5 .esports-prediction {
+    font-size: 11px;
+    line-height: 14px;
+    text-align: center;
+    color: var(--gray400);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-1kqcty5 .esports-prediction .esports-prediction-ratio-container .esports-prediction-ratio {
+    width: 52px;
+    height: 4px;
+    position: relative;
+    background: var(--gray200);
+    font-size: 11px;
+    line-height: 14px;
+    text-align: center;
+    color: var(--gray900);
+}
+
+.css-1kqcty5 .esports-score-container {
+    flex-basis: 77px;
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.css-1kqcty5 .esports-prediction .esports-prediction-ratio-container {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.css-1kqcty5 .esports-prediction .esports-prediction-ratio-container .esports-prediction-ratio {
+    width: 52px;
+    height: 4px;
+    position: relative;
+    background: var(--gray200);
+    font-size: 11px;
+    line-height: 14px;
+    text-align: center;
+    color: var(--gray900);
+}
+
+.css-1kqcty5 .esports-prediction .esports-prediction-ratio-container .esports-prediction-ratio--away {
+    background: var(--red500);
+    left: 0px;
+    position: absolute;
+    height: 4px;
+}
+
+.css-1kqcty5 .esports-team-container {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    min-width: max-content;
+    white-space: nowrap;
+    flex-basis: 0px;
+}
+
+.css-i7pvjw {
+    margin: 56px 0 46px;
+}
+
+.css-i7pvjw img {
+    display: block;
+    max-height: 224px;
+    margin: 0 auto;
+}
+
+.css-v7ylzv {
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.css-v7ylzv >div:first-of-type {
+    position: relative;
+}
+
+.css-a1mmp7 {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    background: #FFF;
+    background: var(--gray0);
+    border-radius: 30px;
+    height: 60px;
+    text-align: left;
+}
+
+.css-a1mmp7 >div:first-of-type {
+    padding-left: 32px;
+    padding-right: 8px;
+    margin-right: 8px;
+}
+
+.css-a1mmp7 small, .css-a1mmp7 label {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #202D37;
+    color: var(--gray900);
+    margin-bottom: 4px;
+    font-style: normal;
+}
+
+.css-chxd0y {
+    font-size: 12px;
+    line-height: 16px;
+    position: absolute;
+    visibility: hidden;
+    display: block;
+    width: 194px;
+}
+
+select {
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+
+input, select {
+    background: #fff;
+    border: none;
+    vertical-align: middle;
+}
+
+option {
+    font-weight: normal;
+    display: block;
+    white-space-collapse: collapse;
+    text-wrap: nowrap;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+
+.css-5itq5r {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    display: block;
+    width: 194px;
+}
+
+.css-5itq5r >div>button {
+    padding: 0;
+    height: auto;
+    color: #9AA4AF;
+    color: var(--gray400);
+    width: 100%;
+    border: 0 none;
+}
+
+.css-bc9ut9 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    height: 40px;
+    border-radius: 4px;
+    text-align: left;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-color: #DBE0E4;
+    border-color: var(--gray250);
+    background: #FFF;
+    background: var(--gray0);
+    padding: 0 32px 0 12px;
+}
+
+.css-5itq5r >div>button img {
+    display: none;
+}
+.css-5itq5r >div>button >* {
+    color: inherit;
+}
+.css-bc9ut9 img {
+    margin-right: 4px;
+}
+
+.css-5itq5r >div>button >* {
+    color: inherit;
+}
+.css-bc9ut9 span {
+    font-size: 14px;
+    line-height: 20px;
+    color: #202D37;
+    color: var(--gray900);
+}
+.css-bc9ut9 span {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.css-a1mmp7 >div {
+    position: relative;
+    height: 40px;
+}
+
+.css-a1mmp7 small, .css-a1mmp7 label {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #202D37;
+    color: var(--gray900);
+    margin-bottom: 4px;
+    font-style: normal;
+}
+
+.css-a1mmp7 label+input {
+    background: #FFF;
+    background: var(--gray0);
+    position: relative;
+    width: 480px;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 20px;
+    color: #202D37;
+    color: var(--gray900);
+}
+
+.css-1vu2yqv {
+    position: static;
+}
+
+.css-1aoc24 img {
+    margin-right: 8px;
+}
+
+.css-a1mmp7 button[type="submit"] {
+    background-image: url(https://s-lol-web.op.gg/images/icon/icon-gg.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 42px;
+    background-size: 42px;
+    -webkit-background-position: 12px center;
+    background-position: 12px center;
+    width: 42px;
+    font-size: 0;
+    box-sizing: content-box;
+}
+
+.css-a1mmp7 >button {
+    padding-right: 24px;
+    padding-left: 12px;
+    height: 100%;
+}
