@@ -4,11 +4,14 @@ import MainSearchContainer from "./MainSearchContainer";
 import MainAdBanner from "./MainAdBanner";
 import MainBodyWrapper from "./MainBodyWrapper";
 
-const MainWrapper = () => {
+const MainWrapper = ({optionOnclick, onClickSearch}) => {
     return <>
         <div id="content-container" className="css-1q6fpdb e1oup1a81">
             <MainOpggLogo></MainOpggLogo>
-            <MainSearchContainer></MainSearchContainer>
+            <MainSearchContainer
+                optionOnclick={optionOnclick}
+                onClickSearch={onClickSearch}
+            />
             <MainAdBanner></MainAdBanner>
             <MainBodyWrapper></MainBodyWrapper>
         </div>
