@@ -1,5 +1,7 @@
 const asyncRequestBase = async(method, url, body) => {
-    let response = await fetch(url, {
+    const decodeUrl = decodeURI(url);
+
+    let response = await fetch(decodeUrl, {
         method: method,
         headers: {
             'Content-Type': 'application/json;charset=utf-8'

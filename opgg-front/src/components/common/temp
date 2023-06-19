@@ -1,47 +1,11 @@
-<tr id="댕청잇" class="css-1kk0pwf e1g3wlsd10">
-    <td class="css-oqjmdl e1g3wlsd9">1</td>
-    <td class="css-1vdhwjr e1g3wlsd8">
-        <a href="/summoners/kr/%EB%8C%95%EC%B2%AD%EC%9E%87">
-            <img
-                src="https://opgg-static.akamaized.net/meta/images/profile_icons/profileIcon4206.jpg?image=q_auto,f_webp,w_64&amp;v=1684731456767"
-                width="32" alt="profile_image" class="icon" height="32">
-                <strong class="summoner-name">댕청잇</strong>
-        </a>
-    </td>
-    <td class="css-1gm6o8r e1g3wlsd7">challenger</td>
-    <td class="css-1oq0a1y e1g3wlsd6">1,846<!-- --> LP</td>
-    <td class="css-4qokog e1g3wlsd3">
-        <a href="/champions/Rakan">
-            <div style="position:relative" class="">
-                <img
-                    src="https://opgg-static.akamaized.net/meta/images/lol/champion/Rakan.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_64&amp;v=1684731456767"
-                    width="32" alt="라칸" height="32">
-            </div>
-        </a>
-        <a href="/champions/Ashe">
-            <div style="position:relative" class="">
-                <img
-                    src="https://opgg-static.akamaized.net/meta/images/lol/champion/Ashe.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_64&amp;v=1684731456767"
-                    width="32" alt="애쉬" height="32">
-            </div>
-        </a>
-        <a href="/champions/Renata">
-            <div style="position:relative" class="">
-                <img
-                    src="https://opgg-static.akamaized.net/meta/images/lol/champion/Renata.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_64&amp;v=1684731456767"
-                    width="32" alt="레나타 글라스크" height="32">
-            </div>
-        </a>
-    </td>
-    <td class="css-j6nsb0 e1g3wlsd5">282</td>
-    <td class="css-oa0foq e1g3wlsd4">
-        <div class="css-12hhsu4 e1qp7b622">
-            <div class="chart">
-                <div class="win"></div>
-                <div class="w">222<!-- -->W</div>
-                <div class="l">139<!-- -->L</div>
-            </div>
-            <div class="text">61<!-- -->%</div>
-        </div>
-    </td>
-</tr>
+<div class="css-1pdmpbt ec4h2cv0">
+    <div class="title">다시 한번 확인해 주세요!</div>
+    <div class="description">지금 입력하신 주소의 페이지는
+        사라졌거나 다른 페이지로 변경되었습니다.
+        주소를 다시 확인해주세요.
+
+        관련 문의사항은 <a>오피지지 고객센터</a>에 알려주시면
+        친절하게 안내해 드리겠습니다.</div>
+    <div class="logo"><img src="https://s-lol-web.op.gg/images/site/error/img-404@2x.png?v=1686926528622" alt=""></div>
+    <div class="actions"><button>이전 페이지</button><a href="/">홈</a></div>
+</div>

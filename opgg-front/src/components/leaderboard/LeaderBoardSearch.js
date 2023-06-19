@@ -1,6 +1,10 @@
 import React from "react";
 
-const LeaderBoardSearch = () => {
+const LeaderBoardSearch = ({onChangeValue, onKeyUp, userName}) => {
+    const submitEventHandler = (e) => {
+        e.preventDefault();
+    }
+
     return <>
         <div className="css-1pyzh3d e1fnyy5m1">
             <div>
@@ -36,9 +40,20 @@ const LeaderBoardSearch = () => {
                     </div>
                 </div>
             </div>
-            <form>
+            <form
+                onSubmit={e => submitEventHandler(e)}
+            >
                 <label className="hidden" htmlFor="summonerNameInput">소환사명</label>
-                <input type="text" id="summonerNameInput" name="summonerNameInput" autoComplete="off" placeholder="소환사명" defaultValue=""/>
+                <input 
+                    type="text" 
+                    id="summonerNameInput" 
+                    name="userName" 
+                    autoComplete="off" 
+                    placeholder="소환사명" 
+                    defaultValue={userName}
+                    onChange={e => onChangeValue(e)}
+                    onKeyUp={e => onKeyUp(e)}
+                />
             </form>
         </div>
     </>

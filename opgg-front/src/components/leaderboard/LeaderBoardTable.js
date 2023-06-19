@@ -1,7 +1,14 @@
 import React from "react";
 import LeaderBoardContent from "./LeaderBoardContent";
+import LeaderBoardPageButtonWrapper from "./LeaderBoardPageButtonWrapper";
 
-const LeaderBoardTable = ({leaderboardList, loading, err, percentageOfvictoriesCalc}) => {
+const LeaderBoardTable = ({leaderboardList, loading, err, userName, percentageOfvictoriesCalc, page, onClick}) => {
+    let pageIndex = Number(page) * 100 - 99;
+
+    const leaderBoardIndex = () => {
+        return pageIndex++;
+    };
+
     return <>
         <div className="css-ndvmk6 elfnyy5m0">
             <table className="css-147gr6a exo2f213">
@@ -32,11 +39,17 @@ const LeaderBoardTable = ({leaderboardList, loading, err, percentageOfvictoriesC
                         key={leaderboard.summonerName}
                         leaderboard={leaderboard}
                         percentageOfvictories={percentageOfvictoriesCalc(leaderboard)}
+                        userName={userName}
+                        leaderBoardIndex={leaderBoardIndex()}
                     />
                 )))}
                 {loading && (<tr></tr>)}
             </tbody>
             </table>
+            <LeaderBoardPageButtonWrapper
+                page={page}
+                onClick={onClick}
+            />
         </div>
     </>
 };

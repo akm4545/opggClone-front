@@ -2881,6 +2881,59 @@ html {
     color: var(--red500)!important;
 }
 
+.css-ndvmk6 table + div {
+    border-radius: 0px 0px 4px 4px;
+}
+
+.css-12a82cm {
+    padding: 20px 12px 12px;
+    background-color: var(--gray0);
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: var(--gray200);
+    font-size: 12px;
+}
+
+.css-12a82cm p {
+    color: var(--gray400);
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.css-12a82cm div {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.css-1unhkzz:nth-of-type(1) {
+    margin-left: 0px;
+}
+
+.css-1unhkzz {
+    box-sizing: border-box;
+    display: block;
+    min-width: 28px;
+    height: 28px;
+    line-height: 28px;
+    margin-left: 12px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border-color: var(--gray100);
+    background-color: var(--gray100);
+    color: var(--gray500);
+    font-weight: bold;
+    text-align: center;
+    font-family: Roboto, sans-serif !important;
+}
+
+.css-1unhkzz img {
+    display: block;
+    margin-top: 1px;
+    margin-left: 1px;
+}
 .css-wlca88{width:100%;min-height:250px;margin-top:24px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;max-width:1080px;margin-left:auto;margin-right:auto;position:relative;background:#FFF;background:var(--gray0);border-radius:4px;padding:8px 0;}.css-wlca88:after{content:"OP.GG";position:absolute;text-align:center;font-size:14px;left:50%;top:50%;color:#FFF;color:var(--gray0);-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%);z-index:-100;}
 
 .css-wlca88 >*{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}
@@ -3013,6 +3066,41 @@ element.style {
     box-sizing: border-box;
 }
 
+.css-1ihi8rc:nth-of-type(1) {
+    margin-left: 0px;
+}
+
+.css-1ihi8rc {
+    box-sizing: border-box;
+    display: block;
+    min-width: 28px;
+    height: 28px;
+    line-height: 28px;
+    margin-left: 12px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border-color: var(--gray200);
+    background-color: var(--gray0);
+    color: var(--gray900);
+    font-weight: bold;
+    text-align: center;
+    font-family: Roboto, sans-serif !important;
+}
+
+.css-17j1uco > td {
+    padding: 4px 0px;
+    font-size: 12px;
+}
+
+.css-17j1uco > td {
+    background: var(--gray100);
+}
+
+.css-17j1uco .summoner-name {
+    color: var(--main500);
+}
 .css-1vvorwk .comment-count {
     margin-left: 4px;
     color: var(--main500);
