@@ -1,6 +1,6 @@
 import react from "react";
 
-const MainSearchContainer = () => {
+const MainSearchContainer = ({optionOnclick, onClickSearch}) => {
     return <>
         <div className="search-contaienr">
             <div>
@@ -28,7 +28,7 @@ const MainSearchContainer = () => {
                         </div>
                         <div className="css-5itq5r e5qh6tw1">
                             <div>
-                                <button type="button" className="css-bc9ut9 e5qh6tw2">
+                                <button type="button" className="css-bc9ut9 e5qh6tw2" onClick={e => optionOnclick(e)}>
                                     <img
                                         src="https://s-lol-web.op.gg/assets/images/regions/01-icon-icon-kr.svg?v=1685352893390"
                                         width="24" alt="" height="24"/>
