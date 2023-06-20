@@ -6,7 +6,7 @@ export const AdList = () => {
     return asyncRequestBase("GET", `${baseUrl}ads`);
 };
 
-export const MainUserSearch = (name) => {
-    name = encodeURIComponent(name);
-    return asyncRequestBase("GET", `${baseUrl}summoner/${name}`);
+export const MainUserSearch = ({summonerName}) => {
+    summonerName = encodeURIComponent(summonerName);
+    return asyncRequestBase("GET", `${baseUrl}summoner/${summonerName}`);
 };
