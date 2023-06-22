@@ -16,7 +16,7 @@ export const changeValue = createAction(CHANGE_VALUE, ({key, value}) => ({key, v
 export const initForm = createAction(createAction(INIT_FORM));
 
 const initState = {
-    summonerName : null,
+    matchList : null,
     err : null
 };
 
@@ -29,10 +29,10 @@ export function* summonerSaga(){
 const summoner = handleActions({
     [SUMMONER_SEARCH_SUCCESS] : (state, {payload, code}) => ({
         ...state,
-        summonerName: payload.summonerName,
+        matchList: payload,
         err: code !== 0,
     }),
-    [SUMMONER_SEARCH_FAILURE]: (state, {payload, err}) => ({
+    [SUMMONER_SEARCH_FAILURE]: (state, {payload: err}) => ({
         ...state,
         err
     }),
@@ -42,7 +42,7 @@ const summoner = handleActions({
     }),
     [INIT_FORM]: (state) => ({
         ...state,
-        summonerName: initState.summonerName
+        matchList: initState.matchList
     })
 }, initState);
 

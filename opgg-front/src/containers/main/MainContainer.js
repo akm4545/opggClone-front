@@ -1,13 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import { useDispatch, useSelector} from "react-redux";
 import summoner, {summonerSearchAction, changeValue, initForm} from "../../modules/main";
-import {useSearchParams} from "../../../node_modules/react-router-dom/dist/index";
 import MainWrapper from "../../components/main/MainWrapper";
 
 
 
 const MainContainer = () => {
-    const [searchParams, setSearchParams] = useSearchParams();
     const dispatch = useDispatch();
 
     const {summonerName, err} = useSelector(({summoner}) => ({
@@ -20,7 +18,8 @@ const MainContainer = () => {
 
     const onClickSearch = (e) => {
         e.preventDefault();
-        dispatch(summonerSearchAction({summonerName}));
+        // eslint-disable-next-line no-restricted-globals
+        location.href = `/summoner/kr/${summonerName}`;
     }
 
     const onChange = e => {
