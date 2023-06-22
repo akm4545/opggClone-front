@@ -9,6 +9,9 @@ const TempIndex = () => {
                 <ul>
                     <li>
                         <Link to="/leaderboards?page=1">랭킹</Link>
+                    </li>
+                    <li>
+                        <Link to="/multiSearch">멀티서치</Link>
                     </li> 
                     <li>
                         임시1 링크

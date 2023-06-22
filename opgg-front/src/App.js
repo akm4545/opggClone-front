@@ -6,6 +6,7 @@ import RegisterPage from './pages/RegisterPage';
 import TempIndex from './pages/TempIndex';
 import LeaderboardPage from './pages/LeaderboardPage';
 import MainPage from './pages/MainPage';
+import MultiSearchPage from './pages/MultiSearchPage';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/login" element={<LoginPage/>}></Route>
         <Route path="/register" element={<RegisterPage/>}></Route>
         <Route path="/main" element={MainPage}></Route>
+        <Route path="/multiSearch" element={<MultiSearchPage/>}></Route>
       </Routes>
     </>
   )
