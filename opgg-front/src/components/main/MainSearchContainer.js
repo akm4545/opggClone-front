@@ -1,6 +1,11 @@
 import react from "react";
 
-const MainSearchContainer = ({optionOnclick, onClickSearch}) => {
+const MainSearchContainer = ({optionOnclick, onClickSearch, summonerName, onChange}) => {
+    const submitEventHandler = (e) => {
+        e.preventDefault();
+    }
+
+
     return <>
         <div className="search-contaienr">
             <div>
@@ -40,10 +45,10 @@ const MainSearchContainer = ({optionOnclick, onClickSearch}) => {
                     <div className=" "><label htmlFor="searchHome" className="label">Search</label>
                         <input
                             id="searchHome" name="search" autoComplete="off" type="text" placeholder="소환사명, 소환사명, ..."
-                            defaultValue=""/>
+                             onChange={onChange}/>
                         <div className="css-1vu2yqv ecvb4lm0"></div>
                     </div>
-                    <button type="submit">.GG</button>
+                    <button type="submit" onSubmit={e => submitEventHandler(e)} onClick={e => onClickSearch(e)}>.GG</button>
                 </form>
             </div>
             <a target="_blank" rel="noreferrer"

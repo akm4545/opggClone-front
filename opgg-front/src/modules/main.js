@@ -9,7 +9,7 @@ const INIT_FORM = "summoner/INIT_FORM";
 
 
 
-export const summonerSearchAction = createAction(SUMMONER_SEARCH);
+export const summonerSearchAction = createAction(SUMMONER_SEARCH, ({summonerName}) => ({summonerName}));
 
 export const changeValue = createAction(CHANGE_VALUE, ({key, value}) => ({key, value}));
 
@@ -20,7 +20,7 @@ const initState = {
     err : null
 };
 
-const summonerSearchSaga = createRequestSaga(SUMMONER_SEARCH, summonerApi);
+const summonerSearchSaga = createRequestSaga(SUMMONER_SEARCH, summonerApi.MainUserSearch);
 
 export function* summonerSaga(){
     yield takeLatest(SUMMONER_SEARCH, summonerSearchSaga);
