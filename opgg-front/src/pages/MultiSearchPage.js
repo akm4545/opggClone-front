@@ -5,6 +5,7 @@ import BodySide from "../components/common/bodySideAD/BodySide";
 import BodyHeader from "../components/common/bodyHeaderAD/BodyHeader";
 import MultiSearchWrapper from "../components/multisearch/MultiSearchWrapper";
 import MultiSearchTop from "../components/multisearch/MultiSearchTop";
+import MultiSearchContent from "../components/multisearch/MultiSearchContent";
 
 const MultiSearchPage = () => {
     return <>
@@ -13,6 +14,7 @@ const MultiSearchPage = () => {
         <MultiSearchWrapper>
             <MultiSearchTop/>
             <BodyHeader/>
+            <MultiSearchContent/>
         </MultiSearchWrapper>
         <OpggFooter></OpggFooter>
     </>;

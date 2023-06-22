@@ -3799,3 +3799,42 @@ option {
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+.css-1lvgb3t .content {
+    width: 1080px;
+    margin: 10px auto 0px;
+}
+
+.css-1lvgb3t .info-box {
+    border-radius: 4px;
+    background-color: var(--gray0);
+}
+
+.css-1lvgb3t .info-box h2 {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: var(--gray200);
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.43;
+    color: var(--gray900);
+}
+
+.css-1lvgb3t .info-box > div {
+    text-align: center;
+}
+
+.css-1lvgb3t .info-box > div .content-title {
+    padding-top: 47px;
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--gray900);
+}
+
+.css-1lvgb3t .info-box > div .content-subtitle {
+    margin-top: 16px;
+    font-size: 15px;
+    color: var(--gray900);
+}
