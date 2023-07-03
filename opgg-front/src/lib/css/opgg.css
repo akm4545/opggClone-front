@@ -5527,3 +5527,332 @@ option {
     margin-top: 32px;
     font-size: 0px;
 }
+
+.css-1lvgb3t .multi-list .summoner-summary .tier-position .tier {
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    display: inline-flex;
+    vertical-align: middle;
+    width: 38px;
+    height: 38px;
+    background-color: var(--gray100);
+    border-radius: 50%;
+}
+
+.css-1lvgb3t .multi-list .summoner-summary .tier-position .most-position {
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    display: inline-flex;
+    vertical-align: middle;
+    width: 38px;
+    height: 38px;
+    background-color: var(--gray100);
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+.css-1lvgb3t .multi-list .summoner-summary .summoner-name {
+    margin-top: 12px;
+    line-height: 22px;
+}
+
+.css-1lvgb3t .multi-list .summoner-summary .summoner-name a {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--gray900);
+    text-decoration: none;
+}
+
+.css-1lvgb3t .multi-list .summoner-summary .lp {
+    margin-top: 3px;
+    line-height: 14px;
+    font-size: 11px;
+    text-align: center;
+    color: var(--gray600);
+    text-transform: capitalize;
+    font-family: Roboto, sans-serif;
+}
+
+.css-1lvgb3t .multi-list .summoner-summary .graph {
+    margin-top: 7px;
+    margin-bottom: 4px;
+}
+
+.css-1lvgb3t .multi-list .bar-graph {
+    width: 100%;
+    line-height: 16px;
+    font-size: 0px;
+    display: flex;
+}
+
+.css-1lvgb3t .multi-list .bar-graph .base {
+    position: relative;
+    width: 155px;
+    height: 16px;
+    padding-right: 4px;
+    background-color: var(--red500);
+    color: rgb(255, 255, 255);
+    text-align: right;
+    font-size: 11px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.css-1lvgb3t .multi-list .bar-graph .win {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 16px;
+    padding-left: 4px;
+    text-align: left;
+    background-color: var(--main500);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    box-sizing: border-box;
+}
+
+.css-1lvgb3t .multi-list .bar-graph .winratio {
+    font-size: 11px;
+    color: var(--red600);
+    margin-left: 8px;
+    font-family: Roboto, sans-serif;
+}
+
+.css-1lvgb3t .multi-list .summoner-summary .win-streak.win-streak--losses {
+    background-color: var(--red500);
+}
+
+.css-1lvgb3t .multi-list .summoner-summary .win-streak {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    padding: 0px 8px;
+    margin-top: 4px;
+    border-radius: 10px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+}
+
+.css-1lvgb3t .multi-list .recent-matches {
+    height: 305px;
+    padding: 15px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: var(--gray200);
+    font-family: Roboto, sans-serif;
+}
+
+.css-1lvgb3t .multi-list .recent-matches .title {
+    line-height: 16px;
+    font-size: 12px;
+    text-align: center;
+    color: var(--gray400);
+}
+
+.css-1lvgb3t .multi-list .recent-matches .positions {
+    margin-top: 8px;
+    font-size: 0px;
+}
+
+.css-1lvgb3t .multi-list .recent-matches .position {
+    display: inline-block;
+    width: 50%;
+}
+
+.css-1lvgb3t .multi-list .recent-matches .position__icon {
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    background-color: var(--gray200);
+    vertical-align: middle;
+    background-size: 18px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.css-1lvgb3t .multi-list .recent-matches .position__info {
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.css-1lvgb3t .multi-list .recent-matches .position__info .role-rate--high {
+    color: var(--red600);
+}
+
+.css-1lvgb3t .multi-list .recent-matches .role-rate {
+    line-height: 16px;
+    font-size: 12px;
+    color: var(--gray500);
+}
+
+.css-1lvgb3t .multi-list .recent-matches .position__info .win-rate {
+    line-height: 14px;
+    font-size: 11px;
+    color: var(--main600);
+}
+
+.css-1lvgb3t .multi-list .recent-matches .recent-games {
+    margin-top: 16px;
+}
+
+.css-1lvgb3t .multi-list .recent-matches .recent-games > li {
+    line-height: 20px;
+    font-size: 0px;
+    font-family: Roboto, sans-serif;
+}
+
+.css-1lvgb3t .multi-list .recent-matches .recent-games > li div:nth-of-type(1) {
+    border-radius: 2px;
+    vertical-align: middle;
+}
+
+.css-1lvgb3t .multi-list .recent-matches .recent-games > li .recent-game-image {
+    display: inline-block;
+}
+
+.css-1lvgb3t .multi-list .recent-matches .recent-games > li .recent-game-image img {
+    border-radius: 2px;
+}
+
+.css-1lvgb3t .multi-list .recent-matches .recent-games > li .is-win {
+    position: relative;
+    display: inline-block;
+    width: 62px;
+    height: 20px;
+    margin-left: 2px;
+    margin-right: 18px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+
+.css-1lvgb3t .multi-list .recent-matches .recent-games > li .is-win--false {
+    background-color: var(--red100);
+    color: var(--red600);
+}
+
+.css-1lvgb3t .multi-list .recent-matches .recent-games > li .time-stamp {
+    display: inline-block;
+    width: 80px;
+    vertical-align: middle;
+    font-size: 12px;
+    text-align: right;
+    color: var(--gray500);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+
+.css-1lvgb3t .multi-list .recent-matches .recent-games > li div:nth-of-type(1) {
+    border-radius: 2px;
+    vertical-align: middle;
+}
+
+.css-1lvgb3t .multi-list .recent-matches .recent-games > li + li {
+    margin-top: 4px;
+}
+
+.css-1lvgb3t .multi-list .recent-matches .recent-games > li .badge.ace {
+    background-color: var(--purple500);
+}
+
+.css-1lvgb3t .multi-list .recent-matches .recent-games > li .is-win--true {
+    background-color: var(--main100);
+    color: var(--main600);
+}
+
+.css-1lvgb3t .multi-list .most-champions {
+    height: 267px;
+    box-sizing: border-box;
+    padding: 16px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: var(--gray200);
+    background: var(--gray100);
+    font-family: Roboto, sans-serif;
+}
+
+.css-1lvgb3t .multi-list .most-champions > li {
+    line-height: 20px;
+    display: flex;
+}
+
+.css-1lvgb3t .multi-list .most-champions > li .champion-image {
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;
+}
+
+.css-1lvgb3t .multi-list .most-champions > li .champion-image img {
+    border-radius: 50%;
+    display: block;
+}
+
+.css-1lvgb3t .multi-list .most-champions > li .kda {
+    display: inline-block;
+    vertical-align: middle;
+    width: 71px;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(117, 133, 146);
+    margin-left: 8px;
+}
+
+.css-1lvgb3t .multi-list .most-champions > li .kda .green {
+    color: rgb(0, 163, 153);
+}
+
+.css-1lvgb3t .multi-list .most-champions > li .game-count {
+    display: inline-block;
+    vertical-align: middle;
+    width: 36px;
+    margin-left: 8px;
+    font-size: 12px;
+    text-align: center;
+    color: var(--gray500);
+}
+
+.css-1lvgb3t .multi-list .most-champions > li .win-ratio {
+    display: inline-block;
+    vertical-align: middle;
+    width: 32px;
+    margin-left: 10px;
+    font-size: 12px;
+    text-align: center;
+    color: var(--gray500);
+}
+.css-1lvgb3t .multi-list .most-champions > li + li {
+    margin-top: 4px;
+}
+
+.css-1lvgb3t .multi-list .most-champions > li .kda .blue {
+    color: rgb(0, 147, 255);
+}
+
+.css-1lvgb3t .multi-list .most-champions > li .win-ratio .red {
+    color: var(--red600);
+}
+
+.css-1lvgb3t .multi-list .most-champions > li .kda .orange {
+    color: rgb(240, 111, 0);
+}
+
+.css-1lvgb3t .multi-list > li + li {
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-color: var(--gray200);
+}
