@@ -19,7 +19,7 @@ const MainContainer = () => {
     const onClickSearch = (e) => {
         e.preventDefault();
         // eslint-disable-next-line no-restricted-globals
-        location.href = `/summoner/kr/${summonerName}`;
+        location.href = `/summoner/kr?summonerName=${summonerName}`;
     }
 
     const onChange = e => {

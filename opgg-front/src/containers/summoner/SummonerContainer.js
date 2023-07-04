@@ -14,18 +14,38 @@ const SummonerContainer = () => {
 
 
     const dispatch = useDispatch();
-    const recentPlaySummoner = () => {
-        matchList.forEach(match => {
-            
-        })
+    const recentGame = () => {
+        let winCnt = 0;
+        let loseCnt = 0;
+        let totalKills = 0;
+        let totalAssists = 0;
+        let totalDeaths = 0;
+        let kdaArr = [];
+        if(matchList?.summonerMatches){
+            matchList.summonerMatches.forEach(data => {
+                let{win, kills, assists, deaths, championName} = data.summoner;
+                if(win === true)
+                    winCnt ++;
+                else
+                    loseCnt ++;
+
+                totalKills += kills;
+                totalAssists += assists;
+                totalDeaths += deaths;
+            })
+            kdaArr = averageKDA(totalKills, totalAssists, totalDeaths, matchList.summonerMatches.length);
+        }
+    }
+
+    const averageKDA = (kills, assists, deaths, gameCnt) => {
+        return [kills/gameCnt.toFixed(1), assists/gameCnt.toFixed(1), deaths/gameCnt.toFixed(1), (kills+assists+deaths)/gameCnt.toFixed(1)];
     }
 
     useEffect(() => {
-        console.log(matchList);
-        if(!matchList){
+        if(!matchList && summonerName){
             dispatch(summonerSearchAction({summonerName}));
         }else{
-
+            recentGame();
         }
     }, [dispatch, matchList])
 

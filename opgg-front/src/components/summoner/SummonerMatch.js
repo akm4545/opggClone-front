@@ -1,6 +1,6 @@
 import react from "react";
 
-const SummonerMatch = () => {
+const SummonerMatch = ({matchList}) => {
     return (
         <>
             <div className="css-150oaqg e1shm8tx0">
