@@ -15,13 +15,8 @@ const SummonerContainer = () => {
 
     const dispatch = useDispatch();
     const recentGame = () => {
-        let winCnt = 0;
-        let loseCnt = 0;
-        let totalKills = 0;
-        let totalAssists = 0;
-        let totalDeaths = 0;
-        let recentGameData = [];
-        let recentChampion = {};
+        let winCnt = 0, loseCnt = 0, totalKills = 0, totalAssists = 0,
+            totalDeaths = 0, recentGameData = [], recentChampions = {};
         if(matchList?.summonerMatches){
             matchList.summonerMatches.forEach(data => {
                 let{win, kills, assists, deaths, championName} = data.summoner;
@@ -33,17 +28,17 @@ const SummonerContainer = () => {
                 totalKills += kills;
                 totalAssists += assists;
                 totalDeaths += deaths;
-                if(recentChampion[championName]){
-                    recentChampion[championName]++;
-                }else{
-                    recentChampion[championName] = 1;
-                }
+
+                recentPlayChampions(championName, win, recentChampions);
             })
+
             recentGameData = averageKDA(totalKills, totalAssists, totalDeaths, matchList.summonerMatches.length);
             recentGameData['winGame'] = winCnt;
             recentGameData['loseGame'] = loseCnt;
-            recentGameData['recentChampion'] = recentChampion;
+            recentGameData['recentChampion'] = recentManyThree(recentChampions);;
             matchList['recentGameData'] = recentGameData;
+
+            console.log(recentGameData);
         }
 
     }
@@ -51,6 +46,49 @@ const SummonerContainer = () => {
     const averageKDA = (kills, assists, deaths, gameCnt) => {
         return {averageKills : kills/gameCnt.toFixed(1), averageAssists : assists/gameCnt.toFixed(1), averageDeaths :deaths/gameCnt.toFixed(1), averageKDA : (kills+assists+deaths)/gameCnt.toFixed(1)};
     }
+
+    const recentPlayChampions = (championName, win, recentChampions) => {
+        if(!recentChampions[championName]){
+            let winLose = [];
+            recentChampions[championName] = championName;
+            winLose.push(win);
+            recentChampions[championName] = winLose;
+        }else{
+            recentChampions[championName].push(win);
+        }
+
+        return recentChampions;
+    }
+
+    const recentManyThree = (obj) =>{
+        let keys =  Object.keys(obj);
+        let values = Object.values(obj);
+        let temp = 0, result = [];
+        for(let i=1; i<values.length; i++){
+            for(let j =0; j<values.length-i; j++){
+                if(values[j].length < values[j+1].length){
+                    temp = keys[j];
+                    keys[j] = keys[j+1];
+                    keys[j+1] = temp;
+                    temp = values[j];
+                    values[j] = values[j+1];
+                    values[j+1] = temp;
+                }
+            }
+        }
+
+        let [one, two, three, ...remain]=keys;
+        let keyArr = [one, two, three];
+        keyArr.forEach(key => {
+            let resultObj = {};
+            resultObj['championName'] = key;
+            resultObj['winLose'] = obj[key];
+            result.push(resultObj);
+        })
+
+        return result;
+    }
+
 
     useEffect(() => {
         if(!matchList && summonerName){

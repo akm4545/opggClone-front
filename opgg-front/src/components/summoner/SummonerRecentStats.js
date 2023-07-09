@@ -1,6 +1,6 @@
 import React from "react";
 
-const SummonerRecentStats = ({recentGameData: {winGame, loseGame, averageKills, averageDeaths, averageAssists}}) =>{
+const SummonerRecentStats = ({recentGameData: {winGame, loseGame, averageKills, averageDeaths, averageAssists, recentChampion : [one, two, three]}}) =>{
     return (
         <>
             <div className="stats">
