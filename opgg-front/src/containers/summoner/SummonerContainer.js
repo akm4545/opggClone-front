@@ -20,7 +20,8 @@ const SummonerContainer = () => {
         let totalKills = 0;
         let totalAssists = 0;
         let totalDeaths = 0;
-        let kdaArr = [];
+        let recentGameData = [];
+        let recentChampion = {};
         if(matchList?.summonerMatches){
             matchList.summonerMatches.forEach(data => {
                 let{win, kills, assists, deaths, championName} = data.summoner;
@@ -32,13 +33,23 @@ const SummonerContainer = () => {
                 totalKills += kills;
                 totalAssists += assists;
                 totalDeaths += deaths;
+                if(recentChampion[championName]){
+                    recentChampion[championName]++;
+                }else{
+                    recentChampion[championName] = 1;
+                }
             })
-            kdaArr = averageKDA(totalKills, totalAssists, totalDeaths, matchList.summonerMatches.length);
+            recentGameData = averageKDA(totalKills, totalAssists, totalDeaths, matchList.summonerMatches.length);
+            recentGameData['winGame'] = winCnt;
+            recentGameData['loseGame'] = loseCnt;
+            recentGameData['recentChampion'] = recentChampion;
+            matchList['recentGameData'] = recentGameData;
         }
+
     }
 
     const averageKDA = (kills, assists, deaths, gameCnt) => {
-        return [kills/gameCnt.toFixed(1), assists/gameCnt.toFixed(1), deaths/gameCnt.toFixed(1), (kills+assists+deaths)/gameCnt.toFixed(1)];
+        return {averageKills : kills/gameCnt.toFixed(1), averageAssists : assists/gameCnt.toFixed(1), averageDeaths :deaths/gameCnt.toFixed(1), averageKDA : (kills+assists+deaths)/gameCnt.toFixed(1)};
     }
 
     useEffect(() => {

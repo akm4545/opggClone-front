@@ -29,16 +29,16 @@ const SummonerLeftSide = () => {
                             <div
                                 id="google_ads_iframe_/21726375739,114726905/VM_5a8460b346e0fb0001fc3bac/VM_625ec10e6848aa421d90623e_1__container__"
                                 style={{border: "0pt none", display: "block", margin: "0px auto"}}>
-                                <iframe
-                                    id="google_ads_iframe_/21726375739,114726905/VM_5a8460b346e0fb0001fc3bac/VM_625ec10e6848aa421d90623e_1"
-                                    name="google_ads_iframe_/21726375739,114726905/VM_5a8460b346e0fb0001fc3bac/VM_625ec10e6848aa421d90623e_1"
-                                    title="3rd party ad content" width="300" height="250" scrolling="no" marginWidth="0"
-                                    marginHeight="0" frameBorder="0" role="region" aria-label="Advertisement"
-                                    tabIndex="0"
-                                    sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-presentation"
-                                    style={{border: "0px", verticalAlign: "bottom"}} data-load-complete="true"
-                                    data-google-container-id="f" data-gtm-yt-inspected-12="true"
-                                    data-gtm-yt-inspected-17="true"></iframe>
+                                {/*<iframe*/}
+                                {/*    id="google_ads_iframe_/21726375739,114726905/VM_5a8460b346e0fb0001fc3bac/VM_625ec10e6848aa421d90623e_1"*/}
+                                {/*    name="google_ads_iframe_/21726375739,114726905/VM_5a8460b346e0fb0001fc3bac/VM_625ec10e6848aa421d90623e_1"*/}
+                                {/*    title="3rd party ad content" width="300" height="250" scrolling="no" marginWidth="0"*/}
+                                {/*    marginHeight="0" frameBorder="0" role="region" aria-label="Advertisement"*/}
+                                {/*    tabIndex="0"*/}
+                                {/*    sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-presentation"*/}
+                                {/*    style={{border: "0px", verticalAlign: "bottom"}} data-load-complete="true"*/}
+                                {/*    data-google-container-id="f" data-gtm-yt-inspected-12="true"*/}
+                                {/*    data-gtm-yt-inspected-17="true"></iframe>*/}
                             </div>
                         </div>
                     </div>
