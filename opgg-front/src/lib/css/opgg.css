@@ -5856,3 +5856,27 @@ option {
     border-left-style: solid;
     border-color: var(--gray200);
 }
+
+.css-1lvgb3t .multi-list .recent-matches .recent-games > li .badge.mvp {
+    background-color: var(--yellow500);
+}
+
+.css-1lvgb3t .multi-list .recent-matches .recent-games > li .badge.ace {
+    background-color: var(--purple500);
+}
+
+.css-1lvgb3t .multi-list .recent-matches .recent-games > li .badge {
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top: 2px;
+    right: -20px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 11px;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    font-weight: normal;
+    font-family: Roboto, sans-serif;
+}

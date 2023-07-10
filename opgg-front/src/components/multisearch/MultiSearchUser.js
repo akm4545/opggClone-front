@@ -1,24 +1,75 @@
 import React from "react";
 
+const laneImageConverter = (lane) => {
+    if(lane === "BOTTOM"){
+        return "ADC";
+    }
+
+    return lane;
+};
+
+const percentageOfvictoriesCalc = (wins, losses) => {
+    console.log(wins);
+    console.log(losses);
+
+    wins = Number(wins);
+    losses = Number(losses);
+
+    const total = wins + losses;
+    const divide = wins / total;
+    
+    return (divide * 100).toFixed(0);
+};
+
+const Position = ({lane, winCount, playCount}) => {
+    return <>
+        <div className="position">
+            <div className="position__icon">
+                <img
+                    src={`https://s-lol-web.op.gg/static/images/site/multi/icon-position-${laneImageConverter(lane)}@2x.png?v=1687932539766`}
+                    width="18" 
+                    alt="" 
+                    height="18"/>
+            </div>
+            <div className="position__info">
+                <div className="role-rate role-rate--high">{playCount}0%</div>
+                <div className="win-rate">
+                    W/R
+                    <strong>{percentageOfvictoriesCalc(winCount, playCount - winCount)}%</strong>
+                </div>
+            </div>
+        </div>
+    </>;
+};
+
+const PlayGameSimpleInfo = ({championName, kill, death, assist, win, ace}) => {
+    return <>
+        <li>
+            <div className="recent-game-image" style={{position: "relative"}}>
+                <img
+                    src={`https://opgg-static.akamaized.net/meta/images/lol/champion/${championName}.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_40&amp;v=1687932539766`}
+                    width="20" 
+                    alt="이렐리아" 
+                    title="이렐리아" 
+                    height="20"/>
+            </div>
+            <div className={`is-win is-win--${win}`}>
+                <span className="kill">{kill}</span>
+                    /
+                <span className="death">{death}</span>
+                    /
+                <span className="assist">{assist}</span>
+                {win && ace && <span className="badge mvp">M</span>}
+                {!win && ace && <span className="badge ace">A</span>}
+            </div>
+            <div className="time-stamp">
+                <div className="tooltip" style={{position: "relative"}}>2일 전</div>
+            </div>
+        </li>
+    </>;
+};
+
 const MultiSearchUser = ({gameInfo}) => {
-    const laneImageConverter = (lane) => {
-        if(lane === "BOTTOM"){
-            return "ADC";
-        }
-
-        return lane;
-    };
-
-    const percentageOfvictoriesCalc = ({wins, losses}) => {
-        wins = Number(wins);
-        losses = Number(losses);
-
-        const total = wins + losses;
-        const divide = wins / total;
-        
-        return (divide * 100).toFixed(0);
-    };
-
     const winStreakCalc = ({gameList}) => {
         const win = gameList[0].win;
         let gameCount = 0;
@@ -104,10 +155,10 @@ const MultiSearchUser = ({gameInfo}) => {
                     <div className="graph">
                         <div className="bar-graph">
                             <div className="base">
-                                <div className="win" style={{width: `${percentageOfvictoriesCalc(gameInfo)}%`}}>{gameInfo.wins}승</div>
+                                <div className="win" style={{width: `${percentageOfvictoriesCalc(gameInfo.wins, gameInfo.losses)}%`}}>{gameInfo.wins}승</div>
                                 {gameInfo.losses}패
                             </div>
-                            <strong className="winratio">{percentageOfvictoriesCalc(gameInfo)}%</strong>
+                            <strong className="winratio">{percentageOfvictoriesCalc(gameInfo.wins, gameInfo.losses)}%</strong>
                         </div>
                     </div>
                     <div className={`win-streak win-streak--${winStreakType(gameInfo)}`}>{winStreakCalc(gameInfo)}{winStreakType(gameInfo) === "wins" ? '연승중' : '연패중'}</div>
@@ -115,79 +166,28 @@ const MultiSearchUser = ({gameInfo}) => {
                 <div className="recent-matches">
                     <div className="title">최근 플레이</div>
                     <div className="positions">
-                        <div className="position">
-                            <div className="position__icon">
-                                <img
-                                    src="https://s-lol-web.op.gg/static/images/site/multi/icon-position-SUPPORT@2x.png?v=1687932539766"
-                                    width="18" 
-                                    alt="" 
-                                    height="18"/>
-                            </div>
-                            <div className="position__info">
-                                <div className="role-rate role-rate--high">70%</div>
-                                <div className="win-rate">
-                                    W/R 
-                                    <strong>14%</strong>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="position">
-                            <div className="position__icon">
-                                <img
-                                    src="https://s-lol-web.op.gg/static/images/site/multi/icon-position-ADC@2x.png?v=1687932539766"
-                                    width="18" 
-                                    alt="" 
-                                    height="18"/>
-                            </div>
-                            <div className="position__info">
-                                <div className="role-rate null">20%</div>
-                                <div className="win-rate">W/R 
-                                    <strong>50%</strong>
-                                </div>
-                            </div>
-                        </div>
+                        <Position
+                            lane={gameInfo.laneInfo.lane.lane}
+                            winCount={gameInfo.laneInfo.lane.winCount}
+                            playCount={gameInfo.laneInfo.lane.playCount}
+                        />
+                        <Position
+                            lane={gameInfo.laneInfo.subLane.lane}
+                            winCount={gameInfo.laneInfo.subLane.winCount}
+                            playCount={gameInfo.laneInfo.subLane.playCount}
+                        />
                     </div>
                     <ul className="recent-games">
-                        <li>
-                            <div className="recent-game-image" style={{position: "relative"}}>
-                                <img
-                                    src="https://opgg-static.akamaized.net/meta/images/lol/champion/Irelia.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_40&amp;v=1687932539766"
-                                    width="20" 
-                                    alt="이렐리아" 
-                                    title="이렐리아" 
-                                    height="20"/>
-                            </div>
-                            <div className="is-win is-win--false">
-                                <span className="kill">2 컴포넌트 분리 필요</span>
-                                 /
-                                <span className="death">10</span>
-                                 /
-                                <span className="assist">3</span>
-                            </div>
-                            <div className="time-stamp">
-                                <div className="tooltip" style={{position: "relative"}}>2일 전</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="recent-game-image" style={{position: "relative"}}>
-                                <img
-                                    src="https://opgg-static.akamaized.net/meta/images/lol/champion/Senna.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_40&amp;v=1687932539766"
-                                    width="20"
-                                    alt="세나" 
-                                    title="세나" 
-                                    height="20"/>
-                                </div>
-                            <div className="is-win is-win--false">
-                                <span className="kill">4</span>
-                                 /
-                                <span className="death">8</span>
-                                 /
-                                <span className="assist">9</span>
-                            </div>
-                            <div className="time-stamp">
-                                <div className="tooltip" style={{position: "relative"}}>2일 전</div>
-                            </div>
-                        </li>
+                        {gameInfo.gameList.map(game => (
+                            <PlayGameSimpleInfo
+                                championName={game.championName}
+                                kill={game.kills}
+                                death={game.deaths}
+                                assist={game.assists}
+                                win={game.win}
+                                ace={game.ace}
+                            />
+                        ))}
                     </ul>
                 </div>
                 <ul className="most-champions">
