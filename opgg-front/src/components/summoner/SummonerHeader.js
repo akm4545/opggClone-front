@@ -1,6 +1,6 @@
 import react from "react";
 import SummonerNav from "./SummonerNav";
-const SummonerHeader = () => {
+const SummonerHeader = ({summonerName}) => {
     return(
         <>
             <div id="content-header" className="css-158fcuv e8nboil0">
@@ -30,7 +30,7 @@ const SummonerHeader = () => {
                                         <button className="more-tier">More Season Tier</button>
                                     </div>
                                 </div>
-                                <div className="name"><h1 className="summoner-name">띠울장</h1>
+                                <div className="name"><h1 className="summoner-name">{summonerName}</h1>
                                     <button className="favorite css-1nrkspk eioz34211"><img
                                         src="https://s-lol-web.op.gg/images/icon/icon-bookmark.svg?v=1687251121630"
                                         alt="off"/></button>

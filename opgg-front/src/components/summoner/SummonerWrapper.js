@@ -9,7 +9,7 @@ const SummonerWrapper = ({matchList}) => {
         <>
             {matchList?.recentGameData  ? (
                 <>
-                    <SummonerHeader></SummonerHeader>
+                    <SummonerHeader summonerName = {matchList.summonerMatches[0].summoner.summonerName}></SummonerHeader>
                     <SummonerNav></SummonerNav>
                     <SummonerBanner></SummonerBanner>
                     <SummonerBodyWrapper matchList={matchList}></SummonerBodyWrapper>

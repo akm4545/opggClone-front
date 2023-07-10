@@ -19,7 +19,8 @@ const SummonerContainer = () => {
             totalDeaths = 0, recentGameData = [], recentChampions = {};
         if(matchList?.summonerMatches){
             matchList.summonerMatches.forEach(data => {
-                let{win, kills, assists, deaths, championName} = data.summoner;
+                let{win, kills, assists, deaths, championName, item0, item1, item2, item3, item4, item5, item6} = data.summoner;
+                let items = [item0, item1, item2, item3, item4, item5, item6];
                 if(win === true)
                     winCnt ++;
                 else
@@ -29,7 +30,8 @@ const SummonerContainer = () => {
                 totalAssists += assists;
                 totalDeaths += deaths;
 
-                recentPlayChampions(championName, win, recentChampions);
+                data.summoner['items'] = items;
+                recentPlayChampions(data.summoner, recentChampions);
             })
 
             recentGameData = averageKDA(totalKills, totalAssists, totalDeaths, matchList.summonerMatches.length);
@@ -44,29 +46,40 @@ const SummonerContainer = () => {
     }
 
     const averageKDA = (kills, assists, deaths, gameCnt) => {
-        return {averageKills : kills/gameCnt.toFixed(1), averageAssists : assists/gameCnt.toFixed(1), averageDeaths :deaths/gameCnt.toFixed(1), averageKDA : (kills+assists+deaths)/gameCnt.toFixed(1)};
+        return {averageKills : averageCalculator(kills, 0,gameCnt), averageAssists : averageCalculator(assists, 0,gameCnt), averageDeaths : averageCalculator(deaths, 0,gameCnt) , averageKDA : averageCalculator(kills, assists, deaths)} ;
     }
 
-    const recentPlayChampions = (championName, win, recentChampions) => {
+    const recentPlayChampions = ({championName, win, kills, assists, deaths}, recentChampions) => {
+        let recentKda = averageCalculator(kills, assists, deaths);
+
         if(!recentChampions[championName]){
             let winLose = [];
-            recentChampions[championName] = championName;
             winLose.push(win);
-            recentChampions[championName] = winLose;
+            recentChampions[championName] = {};
+            recentChampions[championName].winLose = winLose;
         }else{
-            recentChampions[championName].push(win);
+            let existingValue = 0;
+            let {winLose, kda} = recentChampions[championName];
+            winLose.push(win);
+            existingValue = parseFloat(kda);
+            recentKda = averageCalculator(existingValue, recentKda, winLose.length);
         }
-
+        recentChampions[championName].kda = recentKda;
         return recentChampions;
+    }
+
+    const averageCalculator = (value1, value2, value3) => {
+        return parseFloat(((value1+value2)/value3).toFixed(2));
     }
 
     const recentManyThree = (obj) =>{
         let keys =  Object.keys(obj);
         let values = Object.values(obj);
+        console.log(values);
         let temp = 0, result = [];
         for(let i=1; i<values.length; i++){
             for(let j =0; j<values.length-i; j++){
-                if(values[j].length < values[j+1].length){
+                if(values[j].winLose.length < values[j+1].winLose.length){
                     temp = keys[j];
                     keys[j] = keys[j+1];
                     keys[j+1] = temp;
@@ -80,9 +93,11 @@ const SummonerContainer = () => {
         let [one, two, three, ...remain]=keys;
         let keyArr = [one, two, three];
         keyArr.forEach(key => {
+            let {winLose, kda} = obj[key];
             let resultObj = {};
             resultObj['championName'] = key;
-            resultObj['winLose'] = obj[key];
+            resultObj['winLose'] = winLose;
+            resultObj['kda'] = kda;
             result.push(resultObj);
         })
 
@@ -94,6 +109,7 @@ const SummonerContainer = () => {
         if(!matchList && summonerName){
             dispatch(summonerSearchAction({summonerName}));
         }else{
+            console.log(matchList);
             recentGame();
         }
     }, [dispatch, matchList])

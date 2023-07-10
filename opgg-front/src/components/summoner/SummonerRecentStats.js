@@ -1,6 +1,59 @@
 import React from "react";
 
-const SummonerRecentStats = ({recentGameData: {winGame, loseGame, averageKills, averageDeaths, averageAssists, recentChampion : [one, two, three]}}) =>{
+const SummonerRecentStats = ({recentGameData: {winGame, loseGame, averageKills, averageDeaths, averageAssists, recentChampion}}) =>{
+    const kdaStyleObj = {
+        grey : 'css-18ljion',
+        green : 'css-1mz60y0',
+        blue : 'css-1uej4j6',
+        orange :'css-xl4ym'
+    }
+
+    const cnt = {
+        winCnt : 0,
+        loseCnt : 0,
+    }
+
+    const winCnt = (winLose) => {
+        let winCnt = 0;
+        let loseCnt = 0;
+        let odds = 0;
+        winLose.forEach(result => {
+            if(result){
+                winCnt ++;
+            }else{
+                loseCnt++;
+            }
+        })
+
+        cnt.winCnt = winCnt;
+        cnt.loseCnt = loseCnt;
+
+
+        if(loseCnt !== 0)
+            odds = (winCnt / (loseCnt + winCnt))* 100;
+        else
+            odds = 100;
+
+        return odds;
+    }
+
+    const KdaStyle = ({kda}) => {
+        let styleName = "";
+        if(kda < 3){
+            styleName = 'grey';
+        }else if(kda < 4){
+            styleName = 'green';
+        }else if(kda < 5){
+            styleName = 'blue';
+        }else{
+            styleName = 'orange';
+        }
+
+        return <>
+            <div className={`${kdaStyleObj[styleName]} ehasqiv1`} >{kda} 평점</div>
+        </>
+    }
+
     return (
         <>
             <div className="stats">
@@ -55,33 +108,18 @@ const SummonerRecentStats = ({recentGameData: {winGame, loseGame, averageKills, 
             <div className="champions">
                 <div className="title">플레이한 챔피언 (최근 20게임)</div>
                 <ul className="">
-                    <li><img
-                        src="https://opgg-static.akamaized.net/meta/images/lol/champion/Viktor.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_48&amp;v=1687251121630"
-                        width="24" alt="빅토르"/>
-                        <div className="win-lose">
-                            <div className="" style={{position:"relative", display:"inline",}}><span
-                                className="css-1mugido ehasqiv0">100%</span></div>
-                            (2승 0패)
-                        </div>
-                        <div className="css-xl4ym ehasqiv1">5.17 평점</div></li>
-                    <li><img
-                        src="https://opgg-static.akamaized.net/meta/images/lol/champion/Nautilus.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_48&amp;v=1687251121630"
-                        width="24" alt="노틸러스"/>
-                        <div className="win-lose">
-                            <div className="" style={{position:"relative", display:"inline",}}><span
-                                className="css-6kn5on ehasqiv0">50%</span></div>
-                            (1승 1패)
-                        </div>
-                        <div className="css-1mz60y0 ehasqiv1">3 평점</div></li>
-                    <li><img
-                        src="https://opgg-static.akamaized.net/meta/images/lol/champion/Ashe.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_48&amp;v=1687251121630"
-                        width="24" alt="애쉬"/>
-                        <div className="win-lose">
-                            <div className="" style={{position:"relative", display:"inline",}}><span
-                                className="css-1mugido ehasqiv0">100%</span></div>
-                            (1승 0패)
-                        </div>
-                        <div className="css-1mz60y0 ehasqiv1">3.67 평점</div></li>
+                    {recentChampion.map(({championName, kda, winLose}) => (
+                        <li><img
+                            src={`https://opgg-static.akamaized.net/meta/images/lol/champion/${championName}.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_48&amp;v=1687251121630`}
+                            width="24" alt="빅토르"/>
+                            <div className="win-lose">
+                                <div className="" style={{position:"relative", display:"inline",}}><span
+                                    className="css-1mugido ehasqiv0">{winCnt(winLose)}%</span></div>
+                                 ({cnt.winCnt}승 {cnt.loseCnt}패)
+                            </div>
+                            <KdaStyle kda={kda}/>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </>
