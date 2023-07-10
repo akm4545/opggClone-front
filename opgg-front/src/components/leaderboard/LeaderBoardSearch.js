@@ -3,7 +3,7 @@ import React from "react";
 const LeaderBoardSearch = ({onChangeValue, onKeyUp, userName}) => {
     const submitEventHandler = (e) => {
         e.preventDefault();
-    }
+    };
 
     return <>
         <div className="css-1pyzh3d e1fnyy5m1">

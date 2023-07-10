@@ -1,22 +1,27 @@
 import React from "react";
 
-const MultiSearchTop = () => {
+const MultiSearchTop = ({onChange, onClick}) => {
+    const submitEventHandler = (e) => {
+        e.preventDefault();
+    };
+    
     return <>
         <div className="header css-gkjk1a e1dgwx8n0" id="content-header">
             <div>
-                <form className="FormItem">
+                <form className="FormItem" onSubmit={e => submitEventHandler(e)}>
                     <label className="hidden" htmlFor="multiInput">
                         멀티서치
                     </label>
                     <textarea 
                         id="multiInput" 
-                        name="query"
+                        name="summonerName"
                         placeholder="ROX Smeb 님이 방에 참가했습니다.
                                     ROX Peanut 님이 방에 참가했습니다.
                                     ROX Kuro 님이 방에 참가했습니다.
                                     ROX PraY 님이 방에 참가했습니다.
                                     ROX GorillA 님이 방에 참가했습니다." 
                         className="TextArea"
+                        onChange={e => onChange(e)}
                         defaultValue="">
                     </textarea>
                     <div className="button-box">
@@ -54,7 +59,7 @@ const MultiSearchTop = () => {
                             </div>
                         </div>
                         <button 
-                            type="submit" 
+                            onClick={e => onClick()} 
                             className="css-qa085a e1g0z3cq3">
                                 여러명의 소환사 이름으로 요약 검색
                         </button>

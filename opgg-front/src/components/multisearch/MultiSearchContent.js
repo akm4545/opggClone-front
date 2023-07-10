@@ -15,11 +15,18 @@ const MultiSearchDescription = () => {
     </>
 }
 
-const MultiSearchContent = () => {
+const MultiSearchContent = ({multisearch}) => {
+    console.log(multisearch);
+
     return <>
         <div className="content" id="content-container">
-            {/* <MultiSearchDescription/> */}
-            <MultiSearchUser/>
+            {multisearch === null ? <MultiSearchDescription/> 
+                : (multisearch.map(gameInfo => (
+                    <MultiSearchUser
+                        key={gameInfo.name}
+                        gameInfo={gameInfo}
+                    />
+                ))) }
         </div>
     </>
 };

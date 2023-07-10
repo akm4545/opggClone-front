@@ -7,14 +7,14 @@ const [MULTISEARCH, MULTISEARCH_SUCCESS, MULTISEARCH_FAILUER] = createRequestAct
 const CHAGE_VALUE = "multisearch/CHANGE_VALUE";
 const INIT_FORM = "multisearch/INIT_FORM";
 
-export const multisearchAction = createAction(MULTISEARCH, name => name);
+export const multisearchAction = createAction(MULTISEARCH, summonerName => summonerName);
 export const initForm = createAction(INIT_FORM);
 export const changeValue = createAction(CHAGE_VALUE, ({key, value}) => ({key, value}));
 
 const initState = {
-    multisearchList: null,
+    multisearch: null,
     err: null,
-    name: null,
+    summonerName: null,
 };
 
 const multisearchListSaga = createRequestSaga(MULTISEARCH, multiSearchApi.multiSearch);
@@ -26,7 +26,7 @@ export function* multisearchSaga(){
 const multisearch = handleActions({
     [MULTISEARCH_SUCCESS]: (state, {payload, code}) => ({
         ...state,
-        multisearch: payload.multiSearch,
+        multisearch: payload,
         err: code !== 0,    
         name: null,    
     }),

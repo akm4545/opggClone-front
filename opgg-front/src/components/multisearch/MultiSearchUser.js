@@ -1,17 +1,65 @@
 import React from "react";
 
-const MultiSearchUser = () => {
+const MultiSearchUser = ({gameInfo}) => {
+    const laneImageConverter = (lane) => {
+        if(lane === "BOTTOM"){
+            return "ADC";
+        }
+
+        return lane;
+    };
+
+    const percentageOfvictoriesCalc = ({wins, losses}) => {
+        wins = Number(wins);
+        losses = Number(losses);
+
+        const total = wins + losses;
+        const divide = wins / total;
+        
+        return (divide * 100).toFixed(0);
+    };
+
+    const winStreakCalc = ({gameList}) => {
+        const win = gameList[0].win;
+        let gameCount = 0;
+
+        for(let i=0; i<gameList.length; i++){
+            let game = gameList[i];
+
+            if(win){
+                if(game.win){
+                    gameCount = gameCount + 1;
+                }else{
+                    break;
+                }            
+            }else{
+                if(game.win){
+                    break;
+                }else{
+                    gameCount = gameCount + 1;
+                }
+            }
+        }
+
+        return gameCount;
+    };
+
+    const winStreakType = ({gameList}) => {
+        if(gameList[0].win){
+            return "wins";
+        }else{
+            return "losses";
+        }
+    };
+    
     return <>
         <ul className="multi-list">
             <li>
                 <div className="prev-seasons">
                     <button className="active" value="21">
-                        <strong>S2023 컴포넌트 분리 필요</strong>
-                    </button>
-                    <button className="" value="19">
-                        <strong>S2022</strong>
-                        <span> bronze</span>
-                    </button>
+                        <strong>S2023</strong>
+                        <span> {gameInfo.tier}</span>
+                    </button>                    
                 </div>
                 <div className="summoner-summary">
                     <div className="last-updated">
@@ -32,14 +80,14 @@ const MultiSearchUser = () => {
                     <div className="tier-position">
                         <div className="tier">
                             <img 
-                                src="https://opgg-static.akamaized.net/images/medals_new/silver.png?image=q_auto,f_webp,w_76&amp;v=1687932539766"
+                                src={`https://opgg-static.akamaized.net/images/medals_new/${gameInfo.tier.toLowerCase()}.png?image=q_auto,f_webp,w_76&amp;v=1687932539766`}
                                 width="38" 
                                 alt="" 
                                 height="38"/>
                         </div>
                         <div className="most-position">
                             <img
-                                src="https://s-lol-web.op.gg/static/images/site/multi/icon-position-SUPPORT@2x.png?v=1687932539766"
+                                src={`https://s-lol-web.op.gg/static/images/site/multi/icon-position-${laneImageConverter(gameInfo.laneInfo.lane.lane)}@2x.png?v=1687932539766`}
                                 width="20" 
                                 alt="" 
                                 height="20"/>
@@ -49,20 +97,20 @@ const MultiSearchUser = () => {
                         <a target="_blank" 
                             rel="noreferrer"
                             href="/summoners/kr/%EC%95%BC%EB%81%BC%EC%A0%95%EB%85%B8%EC%98%88">
-                                야끼정노예
+                                {gameInfo.name}
                         </a>
                     </div>
-                    <div className="lp">silver 3 (50 LP)</div>
+                    <div className="lp">{gameInfo.tier} {gameInfo.rank} ({gameInfo.leaguePoints} LP)</div>
                     <div className="graph">
                         <div className="bar-graph">
                             <div className="base">
-                                <div className="win" style={{width: "51%"}}>120승</div>
-                                117패
+                                <div className="win" style={{width: `${percentageOfvictoriesCalc(gameInfo)}%`}}>{gameInfo.wins}승</div>
+                                {gameInfo.losses}패
                             </div>
-                            <strong className="winratio">51%</strong>
+                            <strong className="winratio">{percentageOfvictoriesCalc(gameInfo)}%</strong>
                         </div>
                     </div>
-                    <div className="win-streak win-streak--losses">6연패중</div>
+                    <div className={`win-streak win-streak--${winStreakType(gameInfo)}`}>{winStreakCalc(gameInfo)}{winStreakType(gameInfo) === "wins" ? '연승중' : '연패중'}</div>
                 </div>
                 <div className="recent-matches">
                     <div className="title">최근 플레이</div>
