@@ -1,6 +1,6 @@
 import react from "react";
 import SummonerNav from "./SummonerNav";
-const SummonerHeader = () => {
+const SummonerHeader = ({summonerName}) => {
     return(
         <>
             <div id="content-header" className="css-158fcuv e8nboil0">
@@ -30,7 +30,7 @@ const SummonerHeader = () => {
                                         <button className="more-tier">More Season Tier</button>
                                     </div>
                                 </div>
-                                <div className="name"><h1 className="summoner-name">띠울장</h1>
+                                <div className="name"><h1 className="summoner-name">{summonerName}</h1>
                                     <button className="favorite css-1nrkspk eioz34211"><img
                                         src="https://s-lol-web.op.gg/images/icon/icon-bookmark.svg?v=1687251121630"
                                         alt="off"/></button>
@@ -54,18 +54,18 @@ const SummonerHeader = () => {
                             <div className="vm-placement css-vnx270 e17e77tq4" id="vm-av" data-format="isvideo">
                                 <div>
                                     <div id="primisPlayerContainerDiv" className="primisslate">
-                                        <iframe
-                                            marginWidth="0"
-                                            marginHeight="0"
-                                            frameBorder="0"
-                                            scrolling="no"
-                                            title="Primis Frame"
-                                            id="google_ads_iframe_dummy_sekindoParent148"
-                                            sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-presentation"
-                                            style={{ width: "1px", height: "1px", position: "absolute" }}
-                                            data-gtm-yt-inspected-12="true"
-                                            data-gtm-yt-inspected-17="true"
-                                        ></iframe>
+                                        {/*<iframe*/}
+                                        {/*    marginWidth="0"*/}
+                                        {/*    marginHeight="0"*/}
+                                        {/*    frameBorder="0"*/}
+                                        {/*    scrolling="no"*/}
+                                        {/*    title="Primis Frame"*/}
+                                        {/*    id="google_ads_iframe_dummy_sekindoParent148"*/}
+                                        {/*    sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-presentation"*/}
+                                        {/*    style={{ width: "1px", height: "1px", position: "absolute" }}*/}
+                                        {/*    data-gtm-yt-inspected-12="true"*/}
+                                        {/*    data-gtm-yt-inspected-17="true"*/}
+                                        {/*></iframe>*/}
                                         <div id="primis_container_div">
                                             <div
                                                 id="placeHolder"
