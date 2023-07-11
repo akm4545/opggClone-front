@@ -5880,3 +5880,51 @@ option {
     font-weight: normal;
     font-family: Roboto, sans-serif;
 }
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+#OPGG_GNB {
+    min-height: 40px;
+    background-color: #28344e;
+}
+
+body {
+    line-height: 1.5;
+}
+
+.OP.GG .opgg-gnb-app--pc .opgg-gnb-app__container, .OP.GG .opgg-gnb-app--responsive .opgg-gnb-app__container {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    word-break: keep-all;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #28344e;
+    z-index: 100;
+}
+
+.OP.GG .opgg-gnb-app--mobile .opgg-gnb-app__global-container, .OP.GG .opgg-gnb-app--pc .opgg-gnb-app__global-container, .OP.GG .opgg-gnb-app--responsive .opgg-gnb-app__global-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 0 0 0 98px;
+}

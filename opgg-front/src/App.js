@@ -3,12 +3,11 @@ import {Route, Navigate} from 'react-router-dom';
 import { Routes } from '../node_modules/react-router-dom/dist/index';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
-import TempIndex from './pages/TempIndex';
 import LeaderboardPage from './pages/LeaderboardPage';
 import MainPage from './pages/MainPage';
 import MultiSearchPage from './pages/MultiSearchPage';
 import SummonerPage from './pages/SummonerPage';
-
+import BoardMainPage from './pages/BoardMainPage';
 
 const App = () => {
   return (
@@ -22,6 +21,7 @@ const App = () => {
         <Route path="/multiSearch" element={<MultiSearchPage/>}></Route>
         <Route path="/main" element={<MainPage/>}></Route>
         <Route path="/summoner/kr" element={<SummonerPage/>}></Route>
+        <Route path="/board" element={<BoardMainPage/>}></Route>
       </Routes>
     </>
   )
