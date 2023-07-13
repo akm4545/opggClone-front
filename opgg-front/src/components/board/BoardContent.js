@@ -2,6 +2,7 @@ import React from "react";
 import BoardSideBar from "../common/board/BoardSideBar";
 import BoardSideRight from "../common/board/BoardSideRight";
 import BoardSubHeader from "../common/board/BoardSubHeader";
+import BoardArticle from "./BoardArticle";
 
 const BoardContent = ({children}) => {
     return <>
@@ -27,6 +28,21 @@ const BoardContent = ({children}) => {
                 <BoardSideBar></BoardSideBar>
                 <div id="content">
                     <BoardSubHeader></BoardSubHeader>
+                    <div class="ads__gpt__728-90__mid">
+                        <div style={{height: "90px",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            position: "relative",
+                            margin: "0 auto",
+                            overflow: "hidden"
+                        }}>
+                            <div id="div-gpt-ad-1562917435090-0">
+                            </div>
+                        </div>
+                    </div>
+                    <section className="article-list article-list--fixed"></section>
+                    <BoardArticle></BoardArticle>
                 </div>
                 <BoardSideRight></BoardSideRight>
             </div>
