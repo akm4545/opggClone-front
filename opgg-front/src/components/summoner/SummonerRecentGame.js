@@ -1,6 +1,6 @@
 import react from "react";
 
-const SummonerRecentGame = ({matches, summonerMatches}) => {
+const SummonerRecentGame = ({matches, summonerMatches, totalKills}) => {
     const multiKill = {
         "2" : '더블킬',
         "3" : '트리플킬',
@@ -28,13 +28,38 @@ const SummonerRecentGame = ({matches, summonerMatches}) => {
             )
     }
 
-    const removeTag = (tag) => {
+    const playedTime = (timestamp) => {
+        let playedTime = timestamp;
+        let unit = '일';
+        let currentTime = new Date();
+        let diffTimeStamp = currentTime - playedTime
+        let diffDate = Math.abs(( diffTimeStamp / (1000 * 60 * 60 * 24)));
+
+        if(diffDate < 1){
+            diffDate = Math.abs((diffTimeStamp / (1000* 60 * 60)));
+            unit = '시간';
+        }
+
+        return `${Math.round(diffDate)}${unit} 전`
     }
+
+    const gameDuration = (seconds) => {
+        return `${parseInt(seconds/60)}분 ${seconds%60}초`
+    }
+
+    const killInvolve =(kills, assists, teamId, index) => {
+        let {blueTeam, redTeam} = totalKills[index];
+        let teamKills = parseInt(teamId) === 100 ? blueTeam.totalKills : redTeam.totalKills;
+        return parseInt(((kills+assists) / teamKills) * 100);
+    }
+
+
 
     return (
         <>
-            {summonerMatches.map(({summoner : {championId, assists, championName, deaths, items, kills,
-                largestMultiKill, participantId, summoner1Id, summoner2Id, summonerLevel, summonerName, teamId, win}}) => (
+            {summonerMatches.map((
+                {summoner : {championId, assists, championName, deaths, items, kills,
+                largestMultiKill, participantId, summoner1Id, summoner2Id, summonerLevel, summonerName, teamId, win}}, index) => (
                 <li className="css-1qq23jn e1iiyghw3">
                     <div result={win ? "WIN": "LOSE"} className={win ? "css-1shak8a e1iiyghw2" : "css-jc3q2t e1iiyghw2"}>
                         <div className="content">
@@ -42,11 +67,11 @@ const SummonerRecentGame = ({matches, summonerMatches}) => {
                                 <div className="game">
                                     <div className="type">무작위 총력전</div>
                                     <div className="time-stamp">
-                                        <div className="" style={{position:"relative"}}>4일 전</div>
+                                        <div className="" style={{position:"relative"}}>{playedTime(matches[index].info.gameCreation)}</div>
                                     </div>
                                     <div className="bar"></div>
                                     <div className="result">{win ? '승리' : '패배'}</div>
-                                    <div className="length">14분 27초</div>
+                                    <div className="length">{gameDuration(matches[index].info.gameDuration)}</div>
                                 </div>
                                 <div className="info">
                                     <div>
@@ -88,7 +113,7 @@ const SummonerRecentGame = ({matches, summonerMatches}) => {
                                         </div>
                                         <div className="stats">
                                             <div className="p-kill">
-                                                <div className="" style={{position:"relative",}}>킬관여 93%</div>
+                                                <div className="" style={{position:"relative",}}>킬관여 {killInvolve(kills, assists, teamId, index)}%</div>
                                             </div>
                                             <div className="ward">제어 와드 0</div>
                                             <div className="cs">
@@ -103,14 +128,9 @@ const SummonerRecentGame = ({matches, summonerMatches}) => {
                                                     <ItemSet items = {item} />
                                                 ))}
                                             </ul>
-                                            {/*<div className="ward">*/}
-                                            {/*    <div className="" style={{position:"relative",}}><img*/}
-                                            {/*        src="https://opgg-static.akamaized.net/meta/images/lol/item/2052.png?image=q_auto,f_webp,w_44&amp;v=1687251121630"*/}
-                                            {/*        width="22" alt="포로 간식" height="22"/></div>*/}
-                                            {/*</div>*/}
                                         </div>
-                                        <div className="multi-kill">{largestMultiKill > 1 ? multiKill[largestMultiKill] : removeTag(this)}</div>
-                                        <div className="badge mvp">MVP</div>
+                                        {largestMultiKill > 1 ? <div className="multi-kill">{multiKill[largestMultiKill]}</div>  : ''}
+                                        {win ? <div className="badge mvp">MVP</div> : ''}
                                     </div>
                                 </div>
                                 <div className="participants">

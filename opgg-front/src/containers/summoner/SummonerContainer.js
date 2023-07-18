@@ -16,8 +16,9 @@ const SummonerContainer = () => {
     const dispatch = useDispatch();
     const recentGame = () => {
         let winCnt = 0, loseCnt = 0, totalKills = 0, totalAssists = 0,
-            totalDeaths = 0, recentGameData = [], recentChampions = {};
+            totalDeaths = 0, recentGameData = [], recentChampions = {}, gameKills = [];
         if(matchList?.summonerMatches){
+            gameKills = teamKills(matchList.matches);
             matchList.summonerMatches.forEach(data => {
                 let{win, kills, assists, deaths, championName, item0, item1, item2, item3, item4, item5, item6} = data.summoner;
                 let items = [item0, item1, item2, item3, item4, item5, item6];
@@ -33,20 +34,40 @@ const SummonerContainer = () => {
                 data.summoner['items'] = items;
                 recentPlayChampions(data.summoner, recentChampions);
             })
-
             recentGameData = averageKDA(totalKills, totalAssists, totalDeaths, matchList.summonerMatches.length);
             recentGameData['winGame'] = winCnt;
             recentGameData['loseGame'] = loseCnt;
-            recentGameData['recentChampion'] = recentManyThree(recentChampions);;
+            recentGameData['recentChampion'] = recentManyThree(recentChampions);
+            matchList['totalKills'] = gameKills;
             matchList['recentGameData'] = recentGameData;
 
-            console.log(recentGameData);
+            console.log(matchList);
         }
 
     }
 
     const averageKDA = (kills, assists, deaths, gameCnt) => {
         return {averageKills : averageCalculator(kills, 0,gameCnt), averageAssists : averageCalculator(assists, 0,gameCnt), averageDeaths : averageCalculator(deaths, 0,gameCnt) , averageKDA : averageCalculator(kills, assists, deaths)} ;
+    }
+
+    const teamKills = (matches) => {
+        let gameKills = [];
+        let teamKills = {};
+        matches.forEach(match => {
+            let{info : {participants}} = match;
+            let redTeam = {totalKills : 0}, blueTeam = {totalKills : 0};
+            participants.forEach(participant => {
+                if(participant.teamId === 100){
+                    blueTeam.totalKills += participant.kills;
+                }else{
+                    redTeam.totalKills += participant.kills;
+                }
+            })
+            teamKills.redTeam = redTeam;
+            teamKills.blueTeam = blueTeam;
+            gameKills.push(teamKills);
+        })
+        return gameKills;
     }
 
     const recentPlayChampions = ({championName, win, kills, assists, deaths}, recentChampions) => {
@@ -75,7 +96,6 @@ const SummonerContainer = () => {
     const recentManyThree = (obj) =>{
         let keys =  Object.keys(obj);
         let values = Object.values(obj);
-        console.log(values);
         let temp = 0, result = [];
         for(let i=1; i<values.length; i++){
             for(let j =0; j<values.length-i; j++){
@@ -109,7 +129,6 @@ const SummonerContainer = () => {
         if(!matchList && summonerName){
             dispatch(summonerSearchAction({summonerName}));
         }else{
-            console.log(matchList);
             recentGame();
         }
     }, [dispatch, matchList])
