@@ -31,7 +31,7 @@ const headerBottomMenuArray = [
         menu:"멀티서치"
     },
     {
-        link:"https://talk.op.gg/s/lol/all?sort=popular",
+        link:"/board",
         menu:"커뮤니티"
     },
 ]

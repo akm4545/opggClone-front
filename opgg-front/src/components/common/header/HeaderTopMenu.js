@@ -2,6 +2,9 @@ import React from "react";
 import TopHeaderMenuItem from "./TopHeaderMenuItem";
 import HeaderThemeButton from "./HeaderThemeButton";
 
+import "../../../lib/css/color.css";
+import "../../../lib/css/opgg.css";
+
 const topMenu = [
     {
         title: "리그오브레전드",

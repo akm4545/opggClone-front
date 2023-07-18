@@ -10,8 +10,6 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import createSagaMiddleware from 'redux-saga';
 import rootReducer, {rootSaga} from './modules';
 import {tempSetUser, check} from './modules/user';
-import "./lib/css/color.css";
-import "./lib/css/opgg.css";
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(rootReducer,
