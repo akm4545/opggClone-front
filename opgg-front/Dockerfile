@@ -2,7 +2,6 @@ FROM node:14 AS builder
 
 WORKDIR /app
 
-COPY package-lock.json ./
 COPY package.json ./
 
 RUN npm ci 
