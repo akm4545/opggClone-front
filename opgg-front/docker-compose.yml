@@ -1,8 +1,8 @@
 version: "3.7"
 services:
   client:
-    image: ******/bankids-client:main
-    container_name: client
+    image: akm4545/opgg_front
+    container_name: opgg_front
     ports:
       - "3000:3000"
 
