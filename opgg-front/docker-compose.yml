@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  client:
+    image: ******/bankids-client:main
+    container_name: client
+    ports:
+      - "3000:3000"
+
+  nginx:
+    depends_on:
+      - client
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - "80:80"
