@@ -6,12 +6,12 @@ services:
     ports:
       - "3000:3000"
 
-  nginx:
-    depends_on:
-      - client
-    restart: always
-    build:
-      dockerfile: Dockerfile
-      context: ./nginx
-    ports:
-      - "80:80"
+  # nginx:
+  #   depends_on:
+  #     - client
+  #   restart: always
+  #   build:
+  #     dockerfile: Dockerfile
+  #     context: ./nginx
+  #   ports:
+  #     - "80:80"
